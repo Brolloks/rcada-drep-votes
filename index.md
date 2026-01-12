@@ -7,7 +7,9 @@ title: "RCADA DRep Voting Record"
 This site is the public archive of RCADA’s votes and rationales for Cardano on-chain governance actions.
 
 ## Latest
-- (Add newest votes here as you go)
+
+<!-- AUTO-INDEX:START -->
+<!-- AUTO-INDEX:END -->
 
 ## Browse by year
 - **2026 votes:** [votes/2026/](votes/2026/)
@@ -23,3 +25,4 @@ Each vote page includes:
 ## Notes
 - “Info” actions are often treated as sentiment signals and process tests, not direct authorizations.
 - Treasury withdrawals and protocol changes are assessed against constitutional/guardrail expectations and governance quality.
+
