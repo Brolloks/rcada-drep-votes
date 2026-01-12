@@ -1,3 +1,7 @@
+---
+title: "RCADA DRep Governance Policy"
+---
+
 # RCADA DRep Governance Policy
 
 This page explains how RCADA approaches on-chain governance, how votes are evaluated, and how to read the voting records published in this repository.
