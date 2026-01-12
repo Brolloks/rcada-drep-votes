@@ -1,6 +1,7 @@
 ---
 title: "RCADA DRep Voting Record"
 ---
+**Start here:** [RCADA DRep Governance Policy](RCADA_GOVERNANCE_POLICY.html)
 
 # RCADA DRep Voting Record
 
