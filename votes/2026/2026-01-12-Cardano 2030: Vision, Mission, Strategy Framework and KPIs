@@ -1,0 +1,77 @@
+---
+title: "Cardano 2030: Vision, Mission, Strategy Framework and KPIs"
+gov_action_id: "gov_action18fd7jwa06fksmwumlcvlft8v4guvaa672qsp6xgenekvs4kmvcqsq8cqks4"
+type: "InfoAction"
+vote: "Yes | No | Abstain"
+vote_date: "2026-01-12"
+expires: "19/01/2026, 21:44:50"
+status: "Draft"
+tags: ["tag1", "tag2"]
+links:
+  adastat: "https://adastat.net/governances/3a5be93bafd26d0dbb9bfe19f4acecaa38cef75e50201d19199e6cc856db660100"
+  govtool: ""
+  forum: ""
+  ipfs: ""
+---
+
+## Summary
+- What the proposal is.
+- The key reason RCADA voted as recorded above.
+- (Optional) Signal or condition communicated.
+
+---
+
+## What this action does
+Neutral description of the proposal and its intended effect.
+
+---
+
+## Analysis Findings
+
+### Constitutional / Guardrails Assessment
+- ✔ …
+- ⚠ …
+- ❌ …
+
+**Assessment:** Pass / Conditional / Fail
+
+---
+
+### Process & Governance Quality
+- Clarity & structure
+- Bundling / admin designation
+- Auditability
+- Precedent risk
+
+**Assessment:** Strong / Mixed / Weak
+
+---
+
+### Impact & Risk Analysis
+- Ecosystem benefit
+- Execution risk
+- Financial / governance risk
+
+**Assessment:** Low / Medium / High
+
+---
+
+## Ratings (Decision Support Only)
+
+| Dimension | Score (1–5) |
+|---------|-------------|
+| Constitutional clarity |  |
+| Governance quality |  |
+| Execution credibility |  |
+| Ecosystem value |  |
+| Risk balance |  |
+
+---
+
+## RCADA Rationale
+
+This is the **authoritative narrative explanation** of why the vote recorded in the metadata
+was cast. It mirrors RCADA’s prior Word-document rationales and is the primary text that
+delegators and other DReps should read.
+
+There is no requirement to restate the vote here.
