@@ -6,7 +6,7 @@ vote: "Yes | No | Abstain"
 vote_date: "YYYY-MM-DD"
 expires: "YYYY-MM-DD"
 status: "Draft | Committed | Superseded"
-tags: ["tag1", "tag2"]
+tags: ["strategy", "governance"]
 links:
   adastat: ""
   govtool: ""
@@ -15,32 +15,63 @@ links:
 ---
 
 ## Summary
-- One-liner: what it is + why RCADA voted this way.
-- (Optional) One-liner: main concern / condition / signal.
-- (Optional) One-liner: what RCADA wants improved next time.
+- What the proposal is.
+- The key reason RCADA voted as recorded above.
+- (Optional) Signal or condition communicated.
+
+---
 
 ## What this action does
-Describe the proposal in plain language.
+Neutral description of the proposal and its intended effect.
 
-## Key considerations
+---
 
-### Constitution / guardrails alignment
-- What you checked
-- What passed / what’s unclear / what’s missing
+## Analysis Findings
 
-### Process quality
-- Clarity of documentation
-- Bundling / admin designation / auditability
-- Any governance precedent risks
+### Constitutional / Guardrails Assessment
+- ✔ …
+- ⚠ …
+- ❌ …
 
-### Impact & risk
+**Assessment:** Pass / Conditional / Fail
+
+---
+
+### Process & Governance Quality
+- Clarity & structure
+- Bundling / admin designation
+- Auditability
+- Precedent risk
+
+**Assessment:** Strong / Mixed / Weak
+
+---
+
+### Impact & Risk Analysis
 - Ecosystem benefit
 - Execution risk
-- Financial / operational risk (if relevant)
+- Financial / governance risk
 
-## Decision
-**Vote: X** — concise statement of why.
+**Assessment:** Low / Medium / High
 
-## What would change my mind (optional)
-- Conditions for a future “Yes”
-- Suggested improvements for resubmission
+---
+
+## Ratings (Decision Support Only)
+
+| Dimension | Score (1–5) |
+|---------|-------------|
+| Constitutional clarity |  |
+| Governance quality |  |
+| Execution credibility |  |
+| Ecosystem value |  |
+| Risk balance |  |
+
+---
+
+## RCADA Rationale
+
+This is the **authoritative narrative explanation** of why the vote recorded in the metadata
+was cast. It mirrors RCADA’s prior Word-document rationales and is the primary text that
+delegators and other DReps should read.
+
+There is no requirement to restate the vote here.
