@@ -8,6 +8,7 @@ expires: "YYYY-MM-DD"
 status: "Draft | Committed | Superseded"
 tags: ["tag1", "tag2"]
 links:
+  adastat: ""
   govtool: ""
   forum: ""
   ipfs: ""
