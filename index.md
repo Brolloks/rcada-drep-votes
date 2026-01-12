@@ -9,7 +9,8 @@ This site is the public archive of RCADA’s votes and rationales for Cardano on
 ## Latest
 
 <!-- AUTO-INDEX:START -->
-- (No committed votes yet)
+- **2026-01-12** — [Cardano 2030: Vision, Mission, Strategy Framework and KPIs](votes/2026/cardano-2030-vision-mission-strategy-framework-and-kpis.md)  
+  **Vote:** Abstain · **Type:** InfoAction
 <!-- AUTO-INDEX:END -->
 
 ## Browse by year
