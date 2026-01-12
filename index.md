@@ -9,6 +9,7 @@ This site is the public archive of RCADA’s votes and rationales for Cardano on
 ## Latest
 
 <!-- AUTO-INDEX:START -->
+- (No committed votes yet)
 <!-- AUTO-INDEX:END -->
 
 ## Browse by year
