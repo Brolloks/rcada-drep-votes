@@ -1,0 +1,146 @@
+name: Auto-update index.md
+
+on:
+  push:
+    paths:
+      - "votes/**"
+      - ".github/workflows/update-index.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Build index block from vote files
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require("fs");
+          const path = require("path");
+
+          const START = "<!-- AUTO-INDEX:START -->";
+          const END = "<!-- AUTO-INDEX:END -->";
+
+          function listMarkdownFiles(dir) {
+            let out = [];
+            for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
+              const p = path.join(dir, ent.name);
+              if (ent.isDirectory()) out = out.concat(listMarkdownFiles(p));
+              else if (ent.isFile() && p.toLowerCase().endsWith(".md")) out.push(p);
+            }
+            return out;
+          }
+
+          function parseFrontMatter(md) {
+            if (!md.startsWith("---")) return null;
+            const end = md.indexOf("\n---", 3);
+            if (end === -1) return null;
+            const raw = md.slice(3, end).trim();
+
+            // minimal YAML-ish parser for simple key: "value" fields
+            const data = {};
+            for (const line of raw.split("\n")) {
+              const m = line.match(/^([A-Za-z0-9_]+)\s*:\s*(.*)\s*$/);
+              if (!m) continue;
+              const k = m[1];
+              let v = m[2];
+
+              // ignore nested maps like links:
+              if (v === "" && (k === "links" || k === "tags")) continue;
+
+              // strip quotes
+              if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) {
+                v = v.slice(1, -1);
+              }
+              data[k] = v;
+            }
+            return data;
+          }
+
+          const votesDir = "votes";
+          const files = fs.existsSync(votesDir) ? listMarkdownFiles(votesDir) : [];
+
+          const rows = [];
+          for (const f of files) {
+            const md = fs.readFileSync(f, "utf8");
+            const fm = parseFrontMatter(md);
+            if (!fm) continue;
+
+            // Only include committed entries (prevents drafts in Latest)
+            const status = (fm.status || "").toLowerCase();
+            if (status && status !== "committed") continue;
+
+            const date = fm.vote_date || path.basename(f).slice(0, 10);
+            const title = fm.title || path.basename(f);
+            const vote = fm.vote || "";
+            const type = fm.type || "";
+
+            rows.push({
+              date,
+              title,
+              vote,
+              type,
+              link: f.replace(/\\/g, "/")
+            });
+          }
+
+          // newest first
+          rows.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+
+          // limit "Latest" list to N items (change if you want)
+          const N = 10;
+          const latest = rows.slice(0, N);
+
+          let block = "";
+          if (latest.length === 0) {
+            block = "- (No committed votes yet)";
+          } else {
+            block = latest
+              .map(r => `- **${r.date}** — [${r.title}](${r.link})  \n  **Vote:** ${r.vote} · **Type:** ${r.type}`)
+              .join("\n");
+          }
+
+          const indexPath = "index.md";
+          if (!fs.existsSync(indexPath)) {
+            console.error("index.md not found");
+            process.exit(1);
+          }
+
+          const index = fs.readFileSync(indexPath, "utf8");
+          const s = index.indexOf(START);
+          const e = index.indexOf(END);
+
+          if (s === -1 || e === -1 || e < s) {
+            console.error("AUTO-INDEX markers not found. Add them to index.md first.");
+            process.exit(1);
+          }
+
+          const updated =
+            index.slice(0, s + START.length) +
+            "\n" +
+            block +
+            "\n" +
+            index.slice(e);
+
+          fs.writeFileSync(indexPath, updated, "utf8");
+          console.log("index.md updated");
+          NODE
+
+      - name: Commit index.md if changed
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.md
+          git commit -m "Auto-update index.md"
+          git push
