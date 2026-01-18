@@ -5,7 +5,7 @@ type: "Info | Treasury Withdrawals | Protocol Parameter Change | Hard Fork Initi
 vote: "Yes | No | Abstain"
 vote_date: "YYYY-MM-DD"
 expires: "YYYY-MM-DD"
-status: "Committed"
+status: "Draft"
 tags: ["strategy", "governance"]
 links:
   adastat: ""
