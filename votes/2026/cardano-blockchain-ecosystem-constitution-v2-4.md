@@ -5,7 +5,7 @@ type: "New Constitution"
 vote: "Abstain"
 vote_date: "2026-01-18"
 expires: "2026-01-19"
-status: "Comitted"
+status: "Committed"
 tags: 
   - constitution
   - governance
