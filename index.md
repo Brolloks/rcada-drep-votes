@@ -10,8 +10,6 @@ This site is the public archive of RCADA’s votes and rationales for Cardano on
 ## Latest
 
 <!-- AUTO-INDEX:START -->
-- **YYYY-MM-DD** — [TEST](votes/2026/test.html)  
-  **Vote:** Yes | No | Abstain · **Type:** Info | Treasury Withdrawals | Protocol Parameter Change | Hard Fork Initiation | Update Committee | New Constitution | ...
 - **2026-01-18** — [CARDANO BLOCKCHAIN ECOSYSTEM CONSTITUTION v2.4](votes/2026/cardano-blockchain-ecosystem-constitution-v2-4.html)  
   **Vote:** Abstain · **Type:** New Constitution
 - **2026-01-12** — [Cardano 2030: Vision, Mission, Strategy Framework and KPIs](votes/2026/cardano-2030-vision-mission-strategy-framework-and-kpis.html)  
