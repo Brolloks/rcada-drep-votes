@@ -27,7 +27,6 @@ jobs:
           const START = "<!-- AUTO-INDEX:START -->";
           const END   = "<!-- AUTO-INDEX:END -->";
 
-          // Files under votes/** that should NOT be treated as vote entries
           const IGNORE_BASENAMES = new Set([
             "index.md",
             "readme.md",
@@ -51,25 +50,14 @@ jobs:
 
           function parseFrontMatter(md) {
             if (!md.startsWith("---")) return null;
-
-            // Find closing --- on its own line
             const end = md.indexOf("\n---", 3);
             if (end === -1) return null;
-
             const raw = md.slice(3, end).trim();
 
-            // Minimal YAML-ish parser for simple key: value lines.
-            // - Ignores nested blocks (e.g., links: followed by indented lines)
-            // - Normalizes inline arrays like ["a","b"] into a string
             const data = {};
-            let inNested = false;
-
             for (const line of raw.split("\n")) {
-              // Detect nested blocks (e.g. "links:" then indented children)
-              if (/^\s+[A-Za-z0-9_]+\s*:/.test(line)) {
-                // indented line => part of nested block; skip
-                continue;
-              }
+              // skip nested items (indented)
+              if (/^\s+/.test(line)) continue;
 
               const m = line.match(/^([A-Za-z0-9_]+)\s*:\s*(.*)\s*$/);
               if (!m) continue;
@@ -77,11 +65,10 @@ jobs:
               const k = m[1];
               let v = m[2] ?? "";
 
-              // If this key starts a nested map/list, skip it
-              // (We'll read only scalar top-level keys for the index.)
+              // skip nested map/list starts
               if (v === "" && (k === "links" || k === "tags")) continue;
 
-              // Strip surrounding quotes
+              // strip quotes
               if (
                 (v.startsWith('"') && v.endsWith('"')) ||
                 (v.startsWith("'") && v.endsWith("'"))
@@ -89,14 +76,13 @@ jobs:
                 v = v.slice(1, -1);
               }
 
-              // Normalize inline arrays like [a, b] or ["a","b"]
+              // normalize inline arrays like [a, b]
               if (v.startsWith("[") && v.endsWith("]")) {
                 v = v.slice(1, -1).trim();
               }
 
               data[k] = v;
             }
-
             return data;
           }
 
@@ -109,7 +95,6 @@ jobs:
             const fm = parseFrontMatter(md);
             if (!fm) continue;
 
-            // Only include committed entries (prevents drafts in Latest)
             const status = (fm.status || "").toLowerCase();
             if (status && status !== "committed") continue;
 
@@ -123,15 +108,12 @@ jobs:
               title,
               vote,
               type,
-              // Use .html so links always open the rendered Pages page
               link: f.replace(/\\/g, "/").replace(/\.md$/i, ".html"),
             });
           }
 
-          // newest first
           rows.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
 
-          // limit "Latest" list to N items
           const N = 10;
           const latest = rows.slice(0, N);
 
@@ -140,25 +122,17 @@ jobs:
             block = "- (No committed votes yet)";
           } else {
             block = latest
-              .map(
-                (r) =>
-                  `- **${r.date}** — [${r.title}](${r.link})  \n  **Vote:** ${r.vote} · **Type:** ${r.type}`
-              )
+              .map(r => `- **${r.date}** — [${r.title}](${r.link})  \n  **Vote:** ${r.vote} · **Type:** ${r.type}`)
               .join("\n");
           }
 
           const indexPath = "index.md";
-          if (!fs.existsSync(indexPath)) {
-            console.error("index.md not found");
-            process.exit(1);
-          }
-
           const index = fs.readFileSync(indexPath, "utf8");
           const s = index.indexOf(START);
           const e = index.indexOf(END);
 
           if (s === -1 || e === -1 || e < s) {
-            console.error("AUTO-INDEX markers not found. Add them to index.md first.");
+            console.error("AUTO-INDEX markers not found.");
             process.exit(1);
           }
 
