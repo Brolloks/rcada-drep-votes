@@ -10,6 +10,8 @@ This site is the public archive of RCADA’s votes and rationales for Cardano on
 ## Latest
 
 <!-- AUTO-INDEX:START -->
+- **2026-01-28** — [DeltaDeFi: Hydra Trading Infrastructure Budget (₳1,500,000)](votes/2026/DeltaDeFi-Hydra Trading Infrastructure Budget (₳1,500,000).html)  
+  **Vote:** No · **Type:** InfoAction
 - **2026-01-18** — [CARDANO BLOCKCHAIN ECOSYSTEM CONSTITUTION v2.4](votes/2026/cardano-blockchain-ecosystem-constitution-v2-4.html)  
   **Vote:** Abstain · **Type:** New Constitution
 - **2026-01-12** — [Cardano 2030: Vision, Mission, Strategy Framework and KPIs](votes/2026/cardano-2030-vision-mission-strategy-framework-and-kpis.html)  
