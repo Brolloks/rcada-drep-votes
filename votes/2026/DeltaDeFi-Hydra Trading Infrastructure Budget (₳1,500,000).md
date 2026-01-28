@@ -15,14 +15,14 @@ links:
 ---
 
 ## Summary
-**What the proposal is: **
--This Budget Info Action asks the Cardano community to signal support for allocating ₳1,500,000 over six months to harden, scale, and productionize DeltaDeFi’s Hydra-based order-book DEX, alongside a Vision 2030 DeFi KPI Measurement Programme.
+**What the proposal is:**  
+This Budget Info Action asks the Cardano community to signal support for allocating ₳1,500,000 over six months to harden, scale, and productionize DeltaDeFi’s Hydra-based order-book DEX, alongside a Vision 2030 DeFi KPI Measurement Programme.
 
-**Key reason RCADA voted NO: **
--While RCADA recognises the technical merit, open-source contributions, and effort behind the proposal, we believe the request remains too tightly coupled to the productionization and growth of a single commercial venue to justify a treasury-level budget signal at this scale. The proposal does not sufficiently separate ecosystem-wide, non-exclusive infrastructure from product-specific execution, which is a critical distinction for treasury prioritisation.
+**Key reason RCADA voted NO:**  
+While RCADA recognises the technical merit, open-source contributions, and effort behind the proposal, we believe the request remains too tightly coupled to the productionization and growth of a single commercial venue to justify a treasury-level budget signal at this scale. The proposal does not sufficiently separate ecosystem-wide, non-exclusive infrastructure from product-specific execution, which is a critical distinction for treasury prioritisation.
 
-**Signal communicated: **
--RCADA would be materially more supportive of a restructured proposal that isolates and funds neutral, reusable Hydra components, benchmarks, tooling, and observability infrastructure, with product-specific scaling and liquidity acquisition pursued via Catalyst or private funding.
+**Signal communicated:**  
+RCADA would be materially more supportive of a restructured proposal that isolates and funds neutral, reusable Hydra components, benchmarks, tooling, and observability infrastructure, with product-specific scaling and liquidity acquisition pursued via Catalyst or private funding.
 ---
 
 ## What this action does
