@@ -23,6 +23,7 @@ While RCADA recognises the technical merit, open-source contributions, and effor
 
 **Signal communicated:**  
 RCADA would be materially more supportive of a restructured proposal that isolates and funds neutral, reusable Hydra components, benchmarks, tooling, and observability infrastructure, with product-specific scaling and liquidity acquisition pursued via Catalyst or private funding.
+
 ---
 
 ## What this action does
