@@ -10,7 +10,7 @@ tags: ["strategy", "governance"]
 links:
   adastat: ""
   govtool: ""
-  forum: ""
+  rcada_full_vote_assessment: "https://brolloks.github.io/rcada-drep-votes/"
   ipfs: ""
 ---
 
