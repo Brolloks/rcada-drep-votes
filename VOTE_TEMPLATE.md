@@ -6,6 +6,7 @@ vote: "Yes | No | Abstain"
 vote_date: "YYYY-MM-DD"
 expires: "YYYY-MM-DD"
 status: "Draft | Committed | Superseded"
+constitution_version: "Cardano Blockchain Ecosystem Constitution v2.4"
 tags: ["strategy", "governance"]
 links:
   adastat: ""
