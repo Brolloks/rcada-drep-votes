@@ -10,6 +10,8 @@ This site is the public archive of RCADA’s votes and rationales for Cardano on
 ## Latest
 
 <!-- AUTO-INDEX:START -->
+- **2026-02-11** — [Increase Transaction and Block Memory Units (Part 1 of 2)](votes/2026/Increase Transaction and Block Memory Units (Part 1 of 2).html)  
+  **Vote:** Yes · **Type:** Protocol Parameter Change
 - **2026-02-07** — [Name Protocol Version 11 hard fork - van Rossem](votes/2026/Name Protocol Version 11 hard fork - van Rossem.html)  
   **Vote:** Yes · **Type:** Info
 - **2026-02-03** — [Net Change Limit (Epoch 613 to Epoch 713)](votes/2026/Net Change Limit (Epoch 613 to Epoch 713).html)  
