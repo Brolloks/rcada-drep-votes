@@ -22,6 +22,11 @@ links:
 
 ---
 
+## Key Considerations
+- Key take aways that influanced the vote.
+
+---
+
 ## What this action does
 Neutral description of the proposal and its intended effect.
 
