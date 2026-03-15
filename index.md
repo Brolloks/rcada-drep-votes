@@ -10,6 +10,8 @@ This site is the public archive of RCADA’s votes and rationales for Cardano on
 ## Latest
 
 <!-- AUTO-INDEX:START -->
+- **2026-03-15** — [Reduce minimum Constitutional Committee size (committeeMinSize) from 7 to 5](votes/2026/Reduce minimum Constitutional Committee size (committeeMinSize) from 7 to 5.html)  
+  **Vote:** Abstain · **Type:** Protocol Parameter Change
 - **2026-03-08** — [Net Change Limit of 300 Million ADA for Epochs 613–713](votes/2026/Net Change Limit of 300 Million ADA for Epochs 613–713.html)  
   **Vote:** Abstain · **Type:** Info
 - **2026-02-11** — [Increase Transaction and Block Memory Units (Part 1 of 2)](votes/2026/Increase Transaction and Block Memory Units (Part 1 of 2).html)  
