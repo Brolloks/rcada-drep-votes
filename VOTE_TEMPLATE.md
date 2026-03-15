@@ -23,7 +23,7 @@ links:
 ---
 
 ## Key Considerations
-- Key take aways that influanced the vote.
+- Key take aways that influenced the vote.
 
 ---
 
