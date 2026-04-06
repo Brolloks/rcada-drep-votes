@@ -10,6 +10,8 @@ This site is the public archive of RCADA’s votes and rationales for Cardano on
 ## Latest
 
 <!-- AUTO-INDEX:START -->
+- **2026-04-06** — [Cardano DeFi Liquidity Budget - Withdrawal 1](votes/2026/Cardano Defi Liquidity Budget - Withdrawal 1.html)  
+  **Vote:** Abstain · **Type:** Treasury Withdrawals
 - **2026-04-06** — [Dingo: a Production-Grade Block Producer in Go by Blink Labs](votes/2026/Dingo: a Production-Grade Block Producer in Go by Blink Labs.html)  
   **Vote:** Yes | No | Abstain · **Type:** Treasury Withdrawals
 - **2026-03-22** — [Cardano Budget Process Framework (facilitated by Intersect)](votes/2026/Cardano Budget Process Framework (facilitated by Intersect).html)  
@@ -28,8 +30,6 @@ This site is the public archive of RCADA’s votes and rationales for Cardano on
   **Vote:** No · **Type:** InfoAction
 - **2026-01-18** — [CARDANO BLOCKCHAIN ECOSYSTEM CONSTITUTION v2.4](votes/2026/cardano-blockchain-ecosystem-constitution-v2-4.html)  
   **Vote:** Abstain · **Type:** New Constitution
-- **2026-01-12** — [Cardano 2030: Vision, Mission, Strategy Framework and KPIs](votes/2026/cardano-2030-vision-mission-strategy-framework-and-kpis.html)  
-  **Vote:** Abstain · **Type:** InfoAction
 <!-- AUTO-INDEX:END -->
 
 ## Browse by year
