@@ -5,7 +5,7 @@ type: "Info"
 vote: "Abstain"
 vote_date: "2026-03-22"
 expires: "2026-04-04"
-status: "Draft"
+status: "Committed"
 constitution_version: "Cardano Blockchain Ecosystem Constitution v2.4"
 tags: ["governance", "budget", "process", "treasury", "ekklesia"]
 links:
