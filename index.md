@@ -10,6 +10,8 @@ This site is the public archive of RCADA’s votes and rationales for Cardano on
 ## Latest
 
 <!-- AUTO-INDEX:START -->
+- **2026-04-06** — [Dingo: a Production-Grade Block Producer in Go by Blink Labs](votes/2026/Dingo: a Production-Grade Block Producer in Go by Blink Labs.html)  
+  **Vote:** Yes | No | Abstain · **Type:** Treasury Withdrawals
 - **2026-03-22** — [Cardano Budget Process Framework (facilitated by Intersect)](votes/2026/Cardano Budget Process Framework (facilitated by Intersect).html)  
   **Vote:** Abstain · **Type:** Info
 - **2026-03-15** — [Reduce minimum Constitutional Committee size (committeeMinSize) from 7 to 5](votes/2026/Reduce minimum Constitutional Committee size (committeeMinSize) from 7 to 5.html)  
