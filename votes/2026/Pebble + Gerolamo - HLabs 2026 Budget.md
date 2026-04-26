@@ -1,7 +1,7 @@
 ---
 title: "Pebble + Gerolamo - HLabs 2026 Budget"
 gov_action_id: "gov_action1ky2j077de82par6f0hny5q56rpnn5hh0csfhrpzeq3hsk7s6vetqquz3scv"
-type: "Info | Treasury Withdrawals | Protocol Parameter Change | Hard Fork Initiation | Update Committee | New Constitution | ..."
+type: "Treasury Withdrawals"
 vote: "Yes"
 vote_date: "2026-04-26"
 expires: "2026-04-29"
