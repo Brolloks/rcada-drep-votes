@@ -11,7 +11,7 @@ This site is the public archive of RCADA’s votes and rationales for Cardano on
 
 <!-- AUTO-INDEX:START -->
 - **2026-04-26** — [Pebble + Gerolamo - HLabs 2026 Budget](votes/2026/Pebble + Gerolamo - HLabs 2026 Budget.html)  
-  **Vote:** Yes · **Type:** Info | Treasury Withdrawals | Protocol Parameter Change | Hard Fork Initiation | Update Committee | New Constitution | ...
+  **Vote:** Yes · **Type:** Treasury Withdrawals
 - **2026-04-06** — [Approve Cardano Foundation as New Managing Entity of Project Catalyst](votes/2026/Approve Cardano Foundation as New Managing Entity of Project Catalyst.html)  
   **Vote:** Yes · **Type:** Info
 - **2026-04-06** — [Cardano DeFi Liquidity Budget - Withdrawal 1](votes/2026/Cardano Defi Liquidity Budget - Withdrawal 1.html)  
