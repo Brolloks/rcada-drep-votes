@@ -1,7 +1,17 @@
----
-title: "RCADA DRep Voting Record"
----
-**Start here:** [RCADA DRep Governance Policy](RCADA_GOVERNANCE_POLICY.html)
+<link rel="stylesheet" href="assets/style.css">
+<div class="site-hero">
+
+# RCADA DRep Voting Record
+
+This site is the public archive of RCADA’s Cardano governance votes, analysis, and rationales.
+
+RCADA uses a Constitution-first, process-aware, and treasury-disciplined approach to governance.
+
+</div>
+
+<div class="nav-box">
+<strong>Start here:</strong> <a href="RCADA_GOVERNANCE_POLICY.html">RCADA DRep Governance Policy</a>
+</div>
 
 # RCADA DRep Voting Record
 
