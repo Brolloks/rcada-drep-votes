@@ -2,7 +2,7 @@
 title: "Dingo: a Production-Grade Block Producer in Go by Blink Labs"
 gov_action_id: "gov_action17dfgtkeufcy945e3ssanqpmn09ft3gezhvepvvg7msmlmaz260dqqjtsmpe"
 type: "Treasury Withdrawals"
-vote: "Yes | No | Abstain"
+vote: "Yes"
 vote_date: "2026-04-06"
 expires: "2026-04-09"
 status: "Committed"
