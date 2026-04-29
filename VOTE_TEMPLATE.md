@@ -80,4 +80,4 @@ This is the **authoritative narrative explanation** of why the vote recorded in 
 was cast. It mirrors RCADA’s prior Word-document rationales and is the primary text that
 delegators and other DReps should read.
 
-RCADA's full vote assessment can be found here: "https://brolloks.github.io/rcada-drep-votes/.
+RCADA's full vote assessment can be found here: "https://brolloks.github.io/rcada-drep-votes/."
