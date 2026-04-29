@@ -26,26 +26,66 @@ This site is the public archive of RCADA’s votes and rationales for Cardano on
 ## Latest
 
 <!-- AUTO-INDEX:START -->
-- **2026-04-29** — [Cardano Summit 2026 and TOKEN2049 Singapore](votes/2026/Cardano Summit 2026 and TOKEN2049 Singapore.html)  
-  **Vote:** No · **Type:** Treasury Withdrawals
-- **2026-04-26** — [Pebble + Gerolamo - HLabs 2026 Budget](votes/2026/Pebble + Gerolamo - HLabs 2026 Budget.html)  
-  **Vote:** Yes · **Type:** Treasury Withdrawals
-- **2026-04-06** — [Approve Cardano Foundation as New Managing Entity of Project Catalyst](votes/2026/Approve Cardano Foundation as New Managing Entity of Project Catalyst.html)  
-  **Vote:** Yes · **Type:** Info
-- **2026-04-06** — [Cardano DeFi Liquidity Budget - Withdrawal 1](votes/2026/Cardano Defi Liquidity Budget - Withdrawal 1.html)  
-  **Vote:** Abstain · **Type:** Treasury Withdrawals
-- **2026-04-06** — [Dingo: a Production-Grade Block Producer in Go by Blink Labs](votes/2026/Dingo: a Production-Grade Block Producer in Go by Blink Labs.html)  
-  **Vote:** Yes · **Type:** Treasury Withdrawals
-- **2026-03-22** — [Cardano Budget Process Framework (facilitated by Intersect)](votes/2026/Cardano Budget Process Framework (facilitated by Intersect).html)  
-  **Vote:** Abstain · **Type:** Info
-- **2026-03-15** — [Reduce minimum Constitutional Committee size (committeeMinSize) from 7 to 5](votes/2026/Reduce minimum Constitutional Committee size (committeeMinSize) from 7 to 5.html)  
-  **Vote:** Abstain · **Type:** Protocol Parameter Change
-- **2026-03-08** — [Net Change Limit of 300 Million ADA for Epochs 613–713](votes/2026/Net Change Limit of 300 Million ADA for Epochs 613–713.html)  
-  **Vote:** Abstain · **Type:** Info
-- **2026-02-11** — [Increase Transaction and Block Memory Units (Part 1 of 2)](votes/2026/Increase Transaction and Block Memory Units (Part 1 of 2).html)  
-  **Vote:** Yes · **Type:** Protocol Parameter Change
-- **2026-02-07** — [Name Protocol Version 11 hard fork - van Rossem](votes/2026/Name Protocol Version 11 hard fork - van Rossem.html)  
-  **Vote:** Yes · **Type:** Info
+<div class="vote-card">
+<div class="vote-date">2026-04-29</div>
+<strong><a href="votes/2026/Cardano Summit 2026 and TOKEN2049 Singapore.html">Cardano Summit 2026 and TOKEN2049 Singapore</a></strong><br>
+<span class="badge badge-no">No</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-04-26</div>
+<strong><a href="votes/2026/Pebble + Gerolamo - HLabs 2026 Budget.html">Pebble + Gerolamo - HLabs 2026 Budget</a></strong><br>
+<span class="badge badge-yes">Yes</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-04-06</div>
+<strong><a href="votes/2026/Approve Cardano Foundation as New Managing Entity of Project Catalyst.html">Approve Cardano Foundation as New Managing Entity of Project Catalyst</a></strong><br>
+<span class="badge badge-yes">Yes</span>
+<span class="badge badge-type">Info</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-04-06</div>
+<strong><a href="votes/2026/Cardano Defi Liquidity Budget - Withdrawal 1.html">Cardano DeFi Liquidity Budget - Withdrawal 1</a></strong><br>
+<span class="badge badge-abstain">Abstain</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-04-06</div>
+<strong><a href="votes/2026/Dingo: a Production-Grade Block Producer in Go by Blink Labs.html">Dingo: a Production-Grade Block Producer in Go by Blink Labs</a></strong><br>
+<span class="badge badge-yes">Yes</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-03-22</div>
+<strong><a href="votes/2026/Cardano Budget Process Framework (facilitated by Intersect).html">Cardano Budget Process Framework (facilitated by Intersect)</a></strong><br>
+<span class="badge badge-abstain">Abstain</span>
+<span class="badge badge-type">Info</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-03-15</div>
+<strong><a href="votes/2026/Reduce minimum Constitutional Committee size (committeeMinSize) from 7 to 5.html">Reduce minimum Constitutional Committee size (committeeMinSize) from 7 to 5</a></strong><br>
+<span class="badge badge-abstain">Abstain</span>
+<span class="badge badge-type">Protocol Parameter Change</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-03-08</div>
+<strong><a href="votes/2026/Net Change Limit of 300 Million ADA for Epochs 613–713.html">Net Change Limit of 300 Million ADA for Epochs 613–713</a></strong><br>
+<span class="badge badge-abstain">Abstain</span>
+<span class="badge badge-type">Info</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-02-11</div>
+<strong><a href="votes/2026/Increase Transaction and Block Memory Units (Part 1 of 2).html">Increase Transaction and Block Memory Units (Part 1 of 2)</a></strong><br>
+<span class="badge badge-yes">Yes</span>
+<span class="badge badge-type">Protocol Parameter Change</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-02-07</div>
+<strong><a href="votes/2026/Name Protocol Version 11 hard fork - van Rossem.html">Name Protocol Version 11 hard fork - van Rossem</a></strong><br>
+<span class="badge badge-yes">Yes</span>
+<span class="badge badge-type">Info</span>
+</div>
 <!-- AUTO-INDEX:END -->
 
 ## Browse by year
