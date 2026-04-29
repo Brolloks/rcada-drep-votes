@@ -10,6 +10,8 @@ This site is the public archive of RCADA’s votes and rationales for Cardano on
 ## Latest
 
 <!-- AUTO-INDEX:START -->
+- **2026-04-29** — [Cardano Summit 2026 and TOKEN2049 Singapore](votes/2026/Cardano Summit 2026 and TOKEN2049 Singapore.html)  
+  **Vote:** No · **Type:** Treasury Withdrawals
 - **2026-04-26** — [Pebble + Gerolamo - HLabs 2026 Budget](votes/2026/Pebble + Gerolamo - HLabs 2026 Budget.html)  
   **Vote:** Yes · **Type:** Treasury Withdrawals
 - **2026-04-06** — [Approve Cardano Foundation as New Managing Entity of Project Catalyst](votes/2026/Approve Cardano Foundation as New Managing Entity of Project Catalyst.html)  
@@ -28,8 +30,6 @@ This site is the public archive of RCADA’s votes and rationales for Cardano on
   **Vote:** Yes · **Type:** Protocol Parameter Change
 - **2026-02-07** — [Name Protocol Version 11 hard fork - van Rossem](votes/2026/Name Protocol Version 11 hard fork - van Rossem.html)  
   **Vote:** Yes · **Type:** Info
-- **2026-02-03** — [Net Change Limit (Epoch 613 to Epoch 713)](votes/2026/Net Change Limit (Epoch 613 to Epoch 713).html)  
-  **Vote:** Abstain · **Type:** Info
 <!-- AUTO-INDEX:END -->
 
 ## Browse by year
