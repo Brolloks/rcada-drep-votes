@@ -7,6 +7,10 @@ title: "RCADA DRep Voting Record"
 
 This site is the public archive of RCADA’s votes and rationales for Cardano on-chain governance actions.
 
+## Voting Summary
+
+<!-- AUTO-STATS:START -->
+<!-- AUTO-STATS:END -->
 ## Latest
 
 <!-- AUTO-INDEX:START -->
