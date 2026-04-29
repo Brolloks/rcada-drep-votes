@@ -97,4 +97,4 @@ The original proposal bundles two distinct activities into a single governance a
 
 The existence of a revised, more focused, and lower-cost alternative demonstrates that a better-structured approach is both possible and already underway. For these reasons, RCADA chooses not to support this earlier combined proposal.
 
-This vote should not be interpreted as opposition to the Cardano Summit or broader ecosystem marketing efforts. RCADA remains open to assessing the revised standalone Summit proposal on its own merits.
+This vote should not be interpreted as opposition to the Cardano Summit or broader ecosystem marketing efforts. RCADA remains open to assessing the revised standalone Summit proposal on its own merits..
