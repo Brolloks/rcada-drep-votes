@@ -176,10 +176,17 @@ jobs:
             `**Committed votes:** ${stats.total}  \n` +
             `**Yes:** ${stats.yes} · **No:** ${stats.no} · **Abstain:** ${stats.abstain}`;
 
-          const latestBlock = committed.slice(0, 10).map(v =>
-            `- **${v.date}** — [${escapeMd(v.title)}](${v.link})  \n` +
-            `  **Vote:** ${v.vote} · **Type:** ${v.type}`
-          ).join("\n") || "- No committed votes yet.";
+          const latestBlock = committed.slice(0, 10).map(v => {
+           const voteClass = v.vote.toLowerCase();
+           return (
+             `<div class="vote-card">\n` +
+             `<div class="vote-date">${v.date}</div>\n` +
+             `<strong><a href="${v.link}">${escapeMd(v.title)}</a></strong><br>\n` +
+             `<span class="badge badge-${voteClass}">${v.vote}</span>\n` +
+             `<span class="badge badge-type">${v.type}</span>\n` +
+             `</div>`
+            );
+          }).join("\n") || "<p>No committed votes yet.</p>";
 
           replaceBlock("index.md", STATS_START, STATS_END, statsBlock);
           replaceBlock("index.md", ROOT_START, ROOT_END, latestBlock);
