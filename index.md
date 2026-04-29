@@ -1,9 +1,8 @@
 <link rel="stylesheet" href="assets/style.css">
 <div class="site-hero">
-## RCADA DRep Voting Record
-RCADA represents delegators through a Constitution-first, transparent, and sustainability-focused approach to governance.
-
-This site is the public record of RCADA’s governance activity since late 2025, including full vote rationales and structured analysis for each on-chain decision.
+<h2>RCADA DRep Voting Record</h2>
+<p>RCADA represents delegators through a Constitution-first, transparent, and sustainability-focused approach to governance.</p>
+<p>This site is the public record of RCADA’s governance activity since late 2025, including full vote rationales and structured analysis for each on-chain decision.</p>
 </div>
 
 <div class="nav-box">
