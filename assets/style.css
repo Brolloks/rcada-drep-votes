@@ -116,3 +116,8 @@ a:hover {
   padding: 1rem;
   border-radius: 10px;
 }
+
+.site-hero h2 {
+  color: white;
+  margin-top: 0;
+}
