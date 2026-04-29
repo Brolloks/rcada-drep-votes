@@ -1,9 +1,10 @@
-name: Auto-update index.md
+name: Auto-update vote indexes
 
 on:
   push:
     paths:
       - "votes/**"
+      - "index.md"
       - ".github/workflows/update-index.yml"
   workflow_dispatch:
 
@@ -11,21 +12,27 @@ permissions:
   contents: write
 
 jobs:
-  update-index:
+  update-indexes:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Build index block from vote files
+      - name: Build vote indexes
         shell: bash
         run: |
           node <<'NODE'
           const fs = require("fs");
           const path = require("path");
 
-          const START = "<!-- AUTO-INDEX:START -->";
-          const END   = "<!-- AUTO-INDEX:END -->";
+          const ROOT_START = "<!-- AUTO-INDEX:START -->";
+          const ROOT_END = "<!-- AUTO-INDEX:END -->";
+          const STATS_START = "<!-- AUTO-STATS:START -->";
+          const STATS_END = "<!-- AUTO-STATS:END -->";
+
+          const VALID_VOTES = new Set(["Yes", "No", "Abstain"]);
+          const VALID_STATUSES = new Set(["Draft", "Committed", "Superseded"]);
 
           const IGNORE_BASENAMES = new Set([
             "index.md",
@@ -33,129 +40,192 @@ jobs:
             "vote_template.md",
           ]);
 
-          function listMarkdownFiles(dir) {
-            let out = [];
+          function walk(dir) {
+            let files = [];
+            if (!fs.existsSync(dir)) return files;
+
             for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
               const p = path.join(dir, ent.name);
-              if (ent.isDirectory()) {
-                out = out.concat(listMarkdownFiles(p));
-              } else if (ent.isFile() && p.toLowerCase().endsWith(".md")) {
-                const base = path.basename(p).toLowerCase();
-                if (IGNORE_BASENAMES.has(base)) continue;
-                out.push(p);
+              if (ent.isDirectory()) files = files.concat(walk(p));
+              else if (ent.isFile() && p.toLowerCase().endsWith(".md")) {
+                if (!IGNORE_BASENAMES.has(path.basename(p).toLowerCase())) files.push(p);
               }
             }
-            return out;
+            return files;
           }
 
           function parseFrontMatter(md) {
             if (!md.startsWith("---")) return null;
             const end = md.indexOf("\n---", 3);
             if (end === -1) return null;
+
             const raw = md.slice(3, end).trim();
-
             const data = {};
-            for (const line of raw.split("\n")) {
-              // skip nested items (indented)
-              if (/^\s+/.test(line)) continue;
 
+            for (const line of raw.split("\n")) {
+              if (/^\s+/.test(line)) continue;
               const m = line.match(/^([A-Za-z0-9_]+)\s*:\s*(.*)\s*$/);
               if (!m) continue;
 
-              const k = m[1];
-              let v = m[2] ?? "";
+              const key = m[1];
+              let val = (m[2] || "").trim();
 
-              // skip nested map/list starts
-              if (v === "" && (k === "links" || k === "tags")) continue;
+              if (val === "" && ["links", "tags"].includes(key)) continue;
 
-              // strip quotes
               if (
-                (v.startsWith('"') && v.endsWith('"')) ||
-                (v.startsWith("'") && v.endsWith("'"))
+                (val.startsWith('"') && val.endsWith('"')) ||
+                (val.startsWith("'") && val.endsWith("'"))
               ) {
-                v = v.slice(1, -1);
+                val = val.slice(1, -1);
               }
 
-              // normalize inline arrays like [a, b]
-              if (v.startsWith("[") && v.endsWith("]")) {
-                v = v.slice(1, -1).trim();
-              }
-
-              data[k] = v;
+              data[key] = val;
             }
+
             return data;
           }
 
-          const votesDir = "votes";
-          const files = fs.existsSync(votesDir) ? listMarkdownFiles(votesDir) : [];
+          function escapeMd(text) {
+            return String(text || "")
+              .replace(/\[/g, "\\[")
+              .replace(/\]/g, "\\]");
+          }
 
-          const rows = [];
-          for (const f of files) {
-            const md = fs.readFileSync(f, "utf8");
+          function htmlLink(mdPath) {
+            return mdPath.replace(/\\/g, "/").replace(/\.md$/i, ".html");
+          }
+
+          function replaceBlock(filePath, start, end, content) {
+            const current = fs.readFileSync(filePath, "utf8");
+            const s = current.indexOf(start);
+            const e = current.indexOf(end);
+
+            if (s === -1 || e === -1 || e < s) {
+              throw new Error(`${filePath}: markers not found: ${start} / ${end}`);
+            }
+
+            const updated =
+              current.slice(0, s + start.length) +
+              "\n" +
+              content.trimEnd() +
+              "\n" +
+              current.slice(e);
+
+            fs.writeFileSync(filePath, updated, "utf8");
+          }
+
+          const allFiles = walk("votes");
+          const warnings = [];
+          const committed = [];
+
+          for (const file of allFiles) {
+            const md = fs.readFileSync(file, "utf8");
             const fm = parseFrontMatter(md);
-            if (!fm) continue;
 
-            const status = (fm.status || "").toLowerCase();
-            if (status && status !== "committed") continue;
+            if (!fm) {
+              warnings.push(`${file}: missing or invalid front matter`);
+              continue;
+            }
 
-            const date = fm.vote_date || path.basename(f).slice(0, 10);
-            const title = fm.title || path.basename(f);
+            const status = fm.status || "";
             const vote = fm.vote || "";
-            const type = fm.type || "";
 
-            rows.push({
-              date,
-              title,
+            if (!VALID_STATUSES.has(status)) {
+              warnings.push(`${file}: invalid status "${status}"`);
+              continue;
+            }
+
+            if (status !== "Committed") continue;
+
+            if (!VALID_VOTES.has(vote)) {
+              warnings.push(`${file}: committed file has invalid vote "${vote}"`);
+              continue;
+            }
+
+            if (!fm.title || !fm.vote_date || !fm.type || !fm.gov_action_id) {
+              warnings.push(`${file}: missing required committed metadata`);
+              continue;
+            }
+
+            committed.push({
+              file,
+              year: fm.vote_date.slice(0, 4),
+              date: fm.vote_date,
+              expires: fm.expires || "",
+              title: fm.title,
               vote,
-              type,
-              link: f.replace(/\\/g, "/").replace(/\.md$/i, ".html"),
+              type: fm.type,
+              gov_action_id: fm.gov_action_id,
+              link: htmlLink(file),
             });
           }
 
-          rows.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+          committed.sort((a, b) =>
+            b.date.localeCompare(a.date) ||
+            a.title.localeCompare(b.title)
+          );
 
-          const N = 10;
-          const latest = rows.slice(0, N);
+          const stats = {
+            total: committed.length,
+            yes: committed.filter(v => v.vote === "Yes").length,
+            no: committed.filter(v => v.vote === "No").length,
+            abstain: committed.filter(v => v.vote === "Abstain").length,
+          };
 
-          let block = "";
-          if (latest.length === 0) {
-            block = "- (No committed votes yet)";
-          } else {
-            block = latest
-              .map(r => `- **${r.date}** — [${r.title}](${r.link})  \n  **Vote:** ${r.vote} · **Type:** ${r.type}`)
-              .join("\n");
+          const statsBlock =
+            `**Committed votes:** ${stats.total}  \n` +
+            `**Yes:** ${stats.yes} · **No:** ${stats.no} · **Abstain:** ${stats.abstain}`;
+
+          const latestBlock = committed.slice(0, 10).map(v =>
+            `- **${v.date}** — [${escapeMd(v.title)}](${v.link})  \n` +
+            `  **Vote:** ${v.vote} · **Type:** ${v.type}`
+          ).join("\n") || "- No committed votes yet.";
+
+          replaceBlock("index.md", STATS_START, STATS_END, statsBlock);
+          replaceBlock("index.md", ROOT_START, ROOT_END, latestBlock);
+
+          const years = [...new Set(committed.map(v => v.year))].sort().reverse();
+
+          for (const year of years) {
+            const yearDir = path.join("votes", year);
+            const yearIndex = path.join(yearDir, "index.md");
+            const votes = committed.filter(v => v.year === year);
+
+            const rows = votes.map(v =>
+              `| ${v.date} | [${escapeMd(v.title)}](./${path.basename(v.link)}) | ${v.vote} | ${v.type} |`
+            ).join("\n");
+
+            const content =
+              `---\n` +
+              `title: "RCADA Votes — ${year}"\n` +
+              `---\n\n` +
+              `# RCADA Votes — ${year}\n\n` +
+              `| Date | Proposal | Vote | Type |\n` +
+              `|---|---|---|---|\n` +
+              `${rows}\n`;
+
+            fs.writeFileSync(yearIndex, content, "utf8");
           }
 
-          const indexPath = "index.md";
-          const index = fs.readFileSync(indexPath, "utf8");
-          const s = index.indexOf(START);
-          const e = index.indexOf(END);
-
-          if (s === -1 || e === -1 || e < s) {
-            console.error("AUTO-INDEX markers not found.");
-            process.exit(1);
+          if (warnings.length) {
+            console.log("\nWarnings:");
+            for (const w of warnings) console.log(`- ${w}`);
           }
 
-          const updated =
-            index.slice(0, s + START.length) +
-            "\n" +
-            block +
-            "\n" +
-            index.slice(e);
-
-          fs.writeFileSync(indexPath, updated, "utf8");
-          console.log("index.md updated");
+          console.log(`Updated indexes for ${committed.length} committed votes.`);
           NODE
 
-      - name: Commit index.md if changed
+      - name: Commit generated indexes if changed
         shell: bash
         run: |
           if git diff --quiet; then
             echo "No changes."
             exit 0
           fi
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.md
-          git commit -m "Auto-update index.md"
+
+          git add index.md votes/**/index.md
+          git commit -m "Auto-update vote indexes"
           git push
