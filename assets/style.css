@@ -21,11 +21,10 @@ a:hover {
 }
 
 .site-hero {
-  background: linear-gradient(135deg, #0f172a, #1e40af);
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
   color: white;
-  padding: 2rem;
-  border-radius: 18px;
-  margin-bottom: 2rem;
+  padding: 24px;
+  border-radius: 16px;
 }
 
 .site-hero h1 {
@@ -34,8 +33,7 @@ a:hover {
 }
 
 .site-hero p {
-  font-size: 1.05rem;
-  margin-bottom: 0;
+  margin: 8px 0 0;
 }
 
 .stats {
