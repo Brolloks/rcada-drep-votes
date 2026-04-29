@@ -3,9 +3,9 @@
 
 # RCADA DRep Voting Record
 
-This site is the public archive of RCADA’s Cardano governance votes, analysis, and rationales.
+RCADA represents delegators through a Constitution-first, transparent, and sustainability-focused approach to governance.
 
-RCADA uses a Constitution-first, process-aware, and treasury-disciplined approach to governance.
+This site is the public record of RCADA’s governance activity since late 2025, including full vote rationales and structured analysis for each on-chain decision.
 
 </div>
 
@@ -15,7 +15,11 @@ RCADA uses a Constitution-first, process-aware, and treasury-disciplined approac
 
 # RCADA DRep Voting Record
 
-This site is the public archive of RCADA’s votes and rationales for Cardano on-chain governance actions.
+## Historical Coverage
+
+This archive reflects RCADA’s structured governance methodology introduced in late 2025.
+
+Earlier votes were conducted prior to this framework and are not included in this repository.
 
 ## Voting Summary
 
