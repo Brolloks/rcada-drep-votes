@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="assets/style.css">
+
 <div class="site-hero">
 <h2>RCADA DRep Voting Record</h2>
 <p>RCADA represents delegators through a Constitution-first, transparent, and sustainability-focused approach to governance.</p>
@@ -8,8 +9,6 @@
 <div class="nav-box">
 <strong>Start here:</strong> <a href="RCADA_GOVERNANCE_POLICY.html">RCADA DRep Governance Policy</a>
 </div>
-
-# RCADA DRep Voting Record
 
 ## Historical Coverage
 
