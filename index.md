@@ -19,8 +19,8 @@ Earlier votes were conducted prior to this framework and are not included in thi
 ## Voting Summary
 
 <!-- AUTO-STATS:START -->
-**Committed votes:** 15  
-**Yes:** 5 · **No:** 2 · **Abstain:** 8
+**Committed votes:** 16  
+**Yes:** 6 · **No:** 2 · **Abstain:** 8
 <!-- AUTO-STATS:END -->
 ## Latest
 
@@ -29,6 +29,12 @@ Earlier votes were conducted prior to this framework and are not included in thi
 <div class="vote-date">2026-05-20</div>
 <strong><a href="votes/2026/IO: Developer Experience Initiative.html">IO: Developer Experience Initiative</a></strong><br>
 <span class="badge badge-abstain">Abstain</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-05-20</div>
+<strong><a href="votes/2026/Pebble & Ecosystem maintenance: TypeScript core of Cardano.html">Pebble & Ecosystem maintenance: TypeScript core of Cardano</a></strong><br>
+<span class="badge badge-yes">Yes</span>
 <span class="badge badge-type">Treasury Withdrawals</span>
 </div>
 <div class="vote-card">
@@ -78,12 +84,6 @@ Earlier votes were conducted prior to this framework and are not included in thi
 <strong><a href="votes/2026/Net Change Limit of 300 Million ADA for Epochs 613–713.html">Net Change Limit of 300 Million ADA for Epochs 613–713</a></strong><br>
 <span class="badge badge-abstain">Abstain</span>
 <span class="badge badge-type">Info</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-02-11</div>
-<strong><a href="votes/2026/Increase Transaction and Block Memory Units (Part 1 of 2).html">Increase Transaction and Block Memory Units (Part 1 of 2)</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Protocol Parameter Change</span>
 </div>
 <!-- AUTO-INDEX:END -->
 
