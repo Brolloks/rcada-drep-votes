@@ -20,7 +20,9 @@ ipfs: ""
 - RCADA votes YES because the proposal is strategically aligned, technically credible, and supported by strong governance safeguards, including audited escrow, milestone-based disbursement, independent oversight, refund protections, and public reporting.
 - RCADA’s support includes caveats around contingency design, measurable adoption, and the need to ensure Pebble expands Cardano’s developer base rather than fragmenting existing ecosystem attention.
 
---- ## Key Considerations 
+--- 
+
+## Key Considerations 
 - Proposal is directly related to the broader HLabs 2026 infrastructure initiative RCADA previously supported, but is now more modular by separating Gerolamo into an independent governance action.
 - Pebble offers a TypeScript-shaped, imperative smart contract language intended to lower onboarding friction for Web2, JavaScript/TypeScript, and Solidity developers.
 - TypeScript tooling maintenance is a practical ecosystem resilience need, particularly around hard fork readiness and protocol compatibility.
