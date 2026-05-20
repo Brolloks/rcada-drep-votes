@@ -19,12 +19,18 @@ Earlier votes were conducted prior to this framework and are not included in thi
 ## Voting Summary
 
 <!-- AUTO-STATS:START -->
-**Committed votes:** 14  
-**Yes:** 5 · **No:** 2 · **Abstain:** 7
+**Committed votes:** 15  
+**Yes:** 5 · **No:** 2 · **Abstain:** 8
 <!-- AUTO-STATS:END -->
 ## Latest
 
 <!-- AUTO-INDEX:START -->
+<div class="vote-card">
+<div class="vote-date">2026-05-20</div>
+<strong><a href="votes/2026/IO: Developer Experience Initiative.html">IO: Developer Experience Initiative</a></strong><br>
+<span class="badge badge-abstain">Abstain</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
 <div class="vote-card">
 <div class="vote-date">2026-04-29</div>
 <strong><a href="votes/2026/Cardano Summit 2026 and TOKEN2049 Singapore.html">Cardano Summit 2026 and TOKEN2049 Singapore</a></strong><br>
@@ -78,12 +84,6 @@ Earlier votes were conducted prior to this framework and are not included in thi
 <strong><a href="votes/2026/Increase Transaction and Block Memory Units (Part 1 of 2).html">Increase Transaction and Block Memory Units (Part 1 of 2)</a></strong><br>
 <span class="badge badge-yes">Yes</span>
 <span class="badge badge-type">Protocol Parameter Change</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-02-07</div>
-<strong><a href="votes/2026/Name Protocol Version 11 hard fork - van Rossem.html">Name Protocol Version 11 hard fork - van Rossem</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Info</span>
 </div>
 <!-- AUTO-INDEX:END -->
 
