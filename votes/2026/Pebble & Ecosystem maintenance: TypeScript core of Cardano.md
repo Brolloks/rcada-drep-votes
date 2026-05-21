@@ -8,19 +8,19 @@ expires: "2026-06-08"
 status: "Committed" 
 constitution_version: "Cardano Blockchain Ecosystem Constitution v2.4" 
 tags: 
-- treasury
-- developer-experience
-- tooling
-- infrastructure
-- hlabs
-- pebble
-- typescript
-- ecosystem-maintenance 
+  - treasury
+  - developer-experience
+  - tooling
+  - infrastructure
+  - hlabs
+  - pebble
+  - typescript
+  - ecosystem-maintenance 
 links: 
-adastat: "https://adastat.net/governances/4206ae0bc11ba74f9eb86cd561ba684e44f0f9dfe12bc8f23911422a7e0a75f300" 
-govtool: "" 
-forum: "" 
-ipfs: "" 
+  adastat: "https://adastat.net/governances/4206ae0bc11ba74f9eb86cd561ba684e44f0f9dfe12bc8f23911422a7e0a75f300" 
+  govtool: "" 
+  forum: "" 
+  ipfs: "" 
 ---
 
 ## Summary 
@@ -93,8 +93,9 @@ Funds are administered through audited SundaeSwap treasury escrow contracts with
 
 --- 
 
-## Ratings 
-(Decision Support Only) | Dimension | Score (1–5) | 
+## Ratings (Decision Support Only) 
+
+| Dimension | Score (1–5) | 
 |---------|-------------| 
 | Constitutional clarity | 5 | 
 | Governance quality | 5 | 
