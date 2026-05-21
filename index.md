@@ -19,12 +19,18 @@ Earlier votes were conducted prior to this framework and are not included in thi
 ## Voting Summary
 
 <!-- AUTO-STATS:START -->
-**Committed votes:** 16  
-**Yes:** 6 · **No:** 2 · **Abstain:** 8
+**Committed votes:** 17  
+**Yes:** 7 · **No:** 2 · **Abstain:** 8
 <!-- AUTO-STATS:END -->
 ## Latest
 
 <!-- AUTO-INDEX:START -->
+<div class="vote-card">
+<div class="vote-date">2026-05-21</div>
+<strong><a href="votes/2026/The first node in the browser-a Cardano USP.html">The First Node in the Browser: A Cardano USP</a></strong><br>
+<span class="badge badge-yes">Yes</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
 <div class="vote-card">
 <div class="vote-date">2026-05-20</div>
 <strong><a href="votes/2026/IO: Developer Experience Initiative.html">IO: Developer Experience Initiative</a></strong><br>
@@ -78,12 +84,6 @@ Earlier votes were conducted prior to this framework and are not included in thi
 <strong><a href="votes/2026/Reduce minimum Constitutional Committee size (committeeMinSize) from 7 to 5.html">Reduce minimum Constitutional Committee size (committeeMinSize) from 7 to 5</a></strong><br>
 <span class="badge badge-abstain">Abstain</span>
 <span class="badge badge-type">Protocol Parameter Change</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-03-08</div>
-<strong><a href="votes/2026/Net Change Limit of 300 Million ADA for Epochs 613–713.html">Net Change Limit of 300 Million ADA for Epochs 613–713</a></strong><br>
-<span class="badge badge-abstain">Abstain</span>
-<span class="badge badge-type">Info</span>
 </div>
 <!-- AUTO-INDEX:END -->
 
