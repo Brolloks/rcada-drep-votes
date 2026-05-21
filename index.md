@@ -33,7 +33,7 @@ Earlier votes were conducted prior to this framework and are not included in thi
 </div>
 <div class="vote-card">
 <div class="vote-date">2026-05-20</div>
-<strong><a href="votes/2026/Pebble & Ecosystem maintenance: TypeScript core of Cardano.html">Pebble & Ecosystem maintenance: TypeScript core of Cardano</a></strong><br>
+<strong><a href="votes/2026/Pebble & Ecosystem maintenance: TypeScript core of Cardano.html">Pebble and Ecosystem maintenance: TypeScript core of Cardano</a></strong><br>
 <span class="badge badge-yes">Yes</span>
 <span class="badge badge-type">Treasury Withdrawals</span>
 </div>
