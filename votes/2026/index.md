@@ -7,7 +7,7 @@ title: "RCADA Votes — 2026"
 | Date | Proposal | Vote | Type |
 |---|---|---|---|
 | 2026-05-20 | [IO: Developer Experience Initiative](./IO: Developer Experience Initiative.html) | Abstain | Treasury Withdrawals |
-| 2026-05-20 | [Pebble & Ecosystem maintenance: TypeScript core of Cardano](./Pebble & Ecosystem maintenance: TypeScript core of Cardano.html) | Yes | Treasury Withdrawals |
+| 2026-05-20 | [Pebble & Ecosystem maintenance: TypeScript core of Cardano](./Pebble and Ecosystem maintenance-TypeScript core of Cardano.html) | Yes | Treasury Withdrawals |
 | 2026-04-29 | [Cardano Summit 2026 and TOKEN2049 Singapore](./Cardano Summit 2026 and TOKEN2049 Singapore.html) | No | Treasury Withdrawals |
 | 2026-04-26 | [Pebble + Gerolamo - HLabs 2026 Budget](./Pebble + Gerolamo - HLabs 2026 Budget.html) | Yes | Treasury Withdrawals |
 | 2026-04-06 | [Approve Cardano Foundation as New Managing Entity of Project Catalyst](./Approve Cardano Foundation as New Managing Entity of Project Catalyst.html) | Yes | Info |
