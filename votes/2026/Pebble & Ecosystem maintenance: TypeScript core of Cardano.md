@@ -1,5 +1,5 @@
 --- 
-title: "Pebble and Ecosystem maintenance: TypeScript core of Cardano" 
+title: "Pebble & Ecosystem maintenance: TypeScript core of Cardano" 
 gov_action_id: "gov_action1ggr2uz7prwn5l84cdn2krwngfez0p7wluy4u3u3ez9pz5ls2whesqnsjly8" 
 type: "Treasury Withdrawals" 
 vote: "Yes" 
@@ -7,7 +7,15 @@ vote_date: "2026-05-20"
 expires: "2026-06-08" 
 status: "Committed" 
 constitution_version: "Cardano Blockchain Ecosystem Constitution v2.4" 
-tags: ["treasury", "developer-experience", "tooling", "infrastructure", "hlabs", "pebble", "typescript", "ecosystem-maintenance"] 
+tags: 
+- treasury
+- developer-experience
+- tooling
+- infrastructure
+- hlabs
+- pebble
+- typescript
+- ecosystem-maintenance 
 links: 
 adastat: "https://adastat.net/governances/4206ae0bc11ba74f9eb86cd561ba684e44f0f9dfe12bc8f23911422a7e0a75f300" 
 govtool: "" 
