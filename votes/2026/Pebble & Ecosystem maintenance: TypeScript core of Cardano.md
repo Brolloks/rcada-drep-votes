@@ -1,5 +1,5 @@
 --- 
-title: "Pebble & Ecosystem maintenance: TypeScript core of Cardano" 
+title: "Pebble and Ecosystem maintenance: TypeScript core of Cardano" 
 gov_action_id: "gov_action1ggr2uz7prwn5l84cdn2krwngfez0p7wluy4u3u3ez9pz5ls2whesqnsjly8" 
 type: "Treasury Withdrawals" 
 vote: "Yes" 
