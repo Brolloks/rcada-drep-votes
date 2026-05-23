@@ -19,12 +19,18 @@ Earlier votes were conducted prior to this framework and are not included in thi
 ## Voting Summary
 
 <!-- AUTO-STATS:START -->
-**Committed votes:** 17  
-**Yes:** 7 · **No:** 2 · **Abstain:** 8
+**Committed votes:** 18  
+**Yes:** 8 · **No:** 2 · **Abstain:** 8
 <!-- AUTO-STATS:END -->
 ## Latest
 
 <!-- AUTO-INDEX:START -->
+<div class="vote-card">
+<div class="vote-date">2026-05-23</div>
+<strong><a href="votes/2026/IO_Cardano Upgrades.html">IO: Cardano Upgrades</a></strong><br>
+<span class="badge badge-yes">Yes</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
 <div class="vote-card">
 <div class="vote-date">2026-05-21</div>
 <strong><a href="votes/2026/The first node in the browser-a Cardano USP.html">The First Node in the Browser: A Cardano USP</a></strong><br>
@@ -78,12 +84,6 @@ Earlier votes were conducted prior to this framework and are not included in thi
 <strong><a href="votes/2026/Cardano Budget Process Framework (facilitated by Intersect).html">Cardano Budget Process Framework (facilitated by Intersect)</a></strong><br>
 <span class="badge badge-abstain">Abstain</span>
 <span class="badge badge-type">Info</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-03-15</div>
-<strong><a href="votes/2026/Reduce minimum Constitutional Committee size (committeeMinSize) from 7 to 5.html">Reduce minimum Constitutional Committee size (committeeMinSize) from 7 to 5</a></strong><br>
-<span class="badge badge-abstain">Abstain</span>
-<span class="badge badge-type">Protocol Parameter Change</span>
 </div>
 <!-- AUTO-INDEX:END -->
 

@@ -6,6 +6,7 @@ title: "RCADA Votes — 2026"
 
 | Date | Proposal | Vote | Type |
 |---|---|---|---|
+| 2026-05-23 | [IO: Cardano Upgrades](./IO_Cardano Upgrades.html) | Yes | Treasury Withdrawals |
 | 2026-05-21 | [The First Node in the Browser: A Cardano USP](./The first node in the browser-a Cardano USP.html) | Yes | Treasury Withdrawals |
 | 2026-05-20 | [IO: Developer Experience Initiative](./IO: Developer Experience Initiative.html) | Abstain | Treasury Withdrawals |
 | 2026-05-20 | [Pebble & Ecosystem maintenance: TypeScript core of Cardano](./Pebble and Ecosystem maintenance-TypeScript core of Cardano.html) | Yes | Treasury Withdrawals |
