@@ -65,12 +65,13 @@ Neutral description of the proposal and its intended effect.
 ## Ratings (Decision Support Only)
 
 | Dimension | Score (1–5) |
-|---------|-------------|
+|---|---:|
 | Constitutional clarity |  |
 | Governance quality |  |
 | Execution credibility |  |
 | Ecosystem value |  |
 | Risk balance |  |
+| **Overall score** | **🟢 80% — Strong support case** |
 
 ---
 
