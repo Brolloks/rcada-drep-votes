@@ -6,6 +6,7 @@ title: "RCADA Votes — 2026"
 
 | Date | Proposal | Vote | Type |
 |---|---|---|---|
+| 2026-05-24 | [Blockfrost: Maintenance and Next Generation Indexing](./Blockfrost_Maintenance and Next Generation Indexing.html) | Abstain | Treasury Withdrawals |
 | 2026-05-24 | [IO & Ensurable Systems: Cardano Maintenance Initiative](./IO and Ensurable Systems_Cardano Maintenance Initiative.html) | Yes | Treasury Withdrawals |
 | 2026-05-24 | [IO & Midgard Labs: L2 Scalability Initiative](./IO and Midgard Labs_L2 Scalability Initiative.html) | Abstain | Treasury Withdrawals |
 | 2026-05-24 | [IO & VacuumLabs: Enhancing Plutus - Performance, Correctness, and Usability](./IO & VacuumLabs_Enhancing Plutus - Performance, Correctness, and Usability.html) | Yes | Treasury Withdrawals |

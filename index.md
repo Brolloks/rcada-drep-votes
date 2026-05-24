@@ -19,12 +19,18 @@ Earlier votes were conducted prior to this framework and are not included in thi
 ## Voting Summary
 
 <!-- AUTO-STATS:START -->
-**Committed votes:** 23  
-**Yes:** 12 · **No:** 2 · **Abstain:** 9
+**Committed votes:** 24  
+**Yes:** 12 · **No:** 2 · **Abstain:** 10
 <!-- AUTO-STATS:END -->
 ## Latest
 
 <!-- AUTO-INDEX:START -->
+<div class="vote-card">
+<div class="vote-date">2026-05-24</div>
+<strong><a href="votes/2026/Blockfrost_Maintenance and Next Generation Indexing.html">Blockfrost: Maintenance and Next Generation Indexing</a></strong><br>
+<span class="badge badge-abstain">Abstain</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
 <div class="vote-card">
 <div class="vote-date">2026-05-24</div>
 <strong><a href="votes/2026/IO and Ensurable Systems_Cardano Maintenance Initiative.html">IO & Ensurable Systems: Cardano Maintenance Initiative</a></strong><br>
@@ -77,12 +83,6 @@ Earlier votes were conducted prior to this framework and are not included in thi
 <div class="vote-date">2026-05-20</div>
 <strong><a href="votes/2026/Pebble and Ecosystem maintenance-TypeScript core of Cardano.html">Pebble & Ecosystem maintenance: TypeScript core of Cardano</a></strong><br>
 <span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-04-29</div>
-<strong><a href="votes/2026/Cardano Summit 2026 and TOKEN2049 Singapore.html">Cardano Summit 2026 and TOKEN2049 Singapore</a></strong><br>
-<span class="badge badge-no">No</span>
 <span class="badge badge-type">Treasury Withdrawals</span>
 </div>
 <!-- AUTO-INDEX:END -->
