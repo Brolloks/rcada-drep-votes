@@ -6,7 +6,7 @@ title: "RCADA Votes — 2026"
 
 | Date | Proposal | Vote | Type |
 |---|---|---|---|
-| 2026-05-24 | [IO & Ensurable Systems: Cardano Maintenance Initiative](./IO & Ensurable Systems: Cardano Maintenance Initiative.html) | Yes | Treasury Withdrawals |
+| 2026-05-24 | [IO & Ensurable Systems: Cardano Maintenance Initiative](./IO and Ensurable Systems: Cardano Maintenance Initiative.html) | Yes | Treasury Withdrawals |
 | 2026-05-24 | [IO & Midgard Labs: L2 Scalability Initiative](./IO & Midgard Labs: L2 Scalability Initiative.html) | Abstain | Treasury Withdrawals |
 | 2026-05-23 | [IO: Cardano Upgrades](./IO_Cardano Upgrades.html) | Yes | Treasury Withdrawals |
 | 2026-05-23 | [IO: Consensus Initiative (Leios)](./IO_Consensus Initiative.html) | Yes | Treasury Withdrawals |

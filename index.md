@@ -27,7 +27,7 @@ Earlier votes were conducted prior to this framework and are not included in thi
 <!-- AUTO-INDEX:START -->
 <div class="vote-card">
 <div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/IO & Ensurable Systems: Cardano Maintenance Initiative.html">IO & Ensurable Systems: Cardano Maintenance Initiative</a></strong><br>
+<strong><a href="votes/2026/IO and Ensurable Systems: Cardano Maintenance Initiative.html">IO & Ensurable Systems: Cardano Maintenance Initiative</a></strong><br>
 <span class="badge badge-yes">Yes</span>
 <span class="badge badge-type">Treasury Withdrawals</span>
 </div>
