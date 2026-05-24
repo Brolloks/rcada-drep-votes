@@ -19,8 +19,8 @@ Earlier votes were conducted prior to this framework and are not included in thi
 ## Voting Summary
 
 <!-- AUTO-STATS:START -->
-**Committed votes:** 22  
-**Yes:** 11 · **No:** 2 · **Abstain:** 9
+**Committed votes:** 23  
+**Yes:** 12 · **No:** 2 · **Abstain:** 9
 <!-- AUTO-STATS:END -->
 ## Latest
 
@@ -35,6 +35,12 @@ Earlier votes were conducted prior to this framework and are not included in thi
 <div class="vote-date">2026-05-24</div>
 <strong><a href="votes/2026/IO and Midgard Labs_L2 Scalability Initiative.html">IO & Midgard Labs: L2 Scalability Initiative</a></strong><br>
 <span class="badge badge-abstain">Abstain</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-05-24</div>
+<strong><a href="votes/2026/IO & VacuumLabs_Enhancing Plutus - Performance, Correctness, and Usability.html">IO & VacuumLabs: Enhancing Plutus - Performance, Correctness, and Usability</a></strong><br>
+<span class="badge badge-yes">Yes</span>
 <span class="badge badge-type">Treasury Withdrawals</span>
 </div>
 <div class="vote-card">
@@ -77,12 +83,6 @@ Earlier votes were conducted prior to this framework and are not included in thi
 <div class="vote-date">2026-04-29</div>
 <strong><a href="votes/2026/Cardano Summit 2026 and TOKEN2049 Singapore.html">Cardano Summit 2026 and TOKEN2049 Singapore</a></strong><br>
 <span class="badge badge-no">No</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-04-26</div>
-<strong><a href="votes/2026/Pebble + Gerolamo - HLabs 2026 Budget.html">Pebble + Gerolamo - HLabs 2026 Budget</a></strong><br>
-<span class="badge badge-yes">Yes</span>
 <span class="badge badge-type">Treasury Withdrawals</span>
 </div>
 <!-- AUTO-INDEX:END -->

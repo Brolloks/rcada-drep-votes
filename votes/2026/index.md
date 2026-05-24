@@ -8,6 +8,7 @@ title: "RCADA Votes — 2026"
 |---|---|---|---|
 | 2026-05-24 | [IO & Ensurable Systems: Cardano Maintenance Initiative](./IO and Ensurable Systems_Cardano Maintenance Initiative.html) | Yes | Treasury Withdrawals |
 | 2026-05-24 | [IO & Midgard Labs: L2 Scalability Initiative](./IO and Midgard Labs_L2 Scalability Initiative.html) | Abstain | Treasury Withdrawals |
+| 2026-05-24 | [IO & VacuumLabs: Enhancing Plutus - Performance, Correctness, and Usability](./IO & VacuumLabs_Enhancing Plutus - Performance, Correctness, and Usability.html) | Yes | Treasury Withdrawals |
 | 2026-05-24 | [IO: Cardano High Assurance Technical Collaboration](./IO_Cardano High Assurance Technical Collaboration.html) | Yes | Treasury Withdrawals |
 | 2026-05-23 | [IO: Cardano Upgrades](./IO_Cardano Upgrades.html) | Yes | Treasury Withdrawals |
 | 2026-05-23 | [IO: Consensus Initiative (Leios)](./IO_Consensus Initiative.html) | Yes | Treasury Withdrawals |
