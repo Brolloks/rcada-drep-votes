@@ -33,7 +33,7 @@ Earlier votes were conducted prior to this framework and are not included in thi
 </div>
 <div class="vote-card">
 <div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/IO and Midgard Labs: L2 Scalability Initiative.html">IO & Midgard Labs: L2 Scalability Initiative</a></strong><br>
+<strong><a href="votes/2026/IO and Midgard Labs_L2 Scalability Initiative.html">IO & Midgard Labs: L2 Scalability Initiative</a></strong><br>
 <span class="badge badge-abstain">Abstain</span>
 <span class="badge badge-type">Treasury Withdrawals</span>
 </div>
