@@ -62,6 +62,12 @@ Earlier votes were conducted prior to this framework and are not included in thi
 <span class="badge badge-type">Treasury Withdrawals</span>
 </div>
 <div class="vote-card">
+<div class="vote-date">2026-05-24</div>
+<strong><a href="votes/2026/The first node in the browser-a Cardano USP.html">The First Node in the Browser: A Cardano USP</a></strong><br>
+<span class="badge badge-yes">Yes</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
+<div class="vote-card">
 <div class="vote-date">2026-05-23</div>
 <strong><a href="votes/2026/IO_Cardano Upgrades.html">IO: Cardano Upgrades</a></strong><br>
 <span class="badge badge-yes">Yes</span>
@@ -70,12 +76,6 @@ Earlier votes were conducted prior to this framework and are not included in thi
 <div class="vote-card">
 <div class="vote-date">2026-05-23</div>
 <strong><a href="votes/2026/IO_Consensus Initiative.html">IO: Consensus Initiative (Leios)</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-21</div>
-<strong><a href="votes/2026/The first node in the browser-a Cardano USP.html">The First Node in the Browser: A Cardano USP</a></strong><br>
 <span class="badge badge-yes">Yes</span>
 <span class="badge badge-type">Treasury Withdrawals</span>
 </div>

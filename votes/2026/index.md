@@ -12,9 +12,9 @@ title: "RCADA Votes — 2026"
 | 2026-05-24 | [IO & VacuumLabs: Enhancing Plutus - Performance, Correctness, and Usability](./IO & VacuumLabs_Enhancing Plutus - Performance, Correctness, and Usability.html) | Yes | Treasury Withdrawals |
 | 2026-05-24 | [IO: Cardano High Assurance Technical Collaboration](./IO_Cardano High Assurance Technical Collaboration.html) | Yes | Treasury Withdrawals |
 | 2026-05-24 | [Pogun: Capital Without Compromise](./Pogun_Capital Without Compromise.html) | Abstain | Treasury Withdrawals |
+| 2026-05-24 | [The First Node in the Browser: A Cardano USP](./The first node in the browser-a Cardano USP.html) | Yes | Treasury Withdrawals |
 | 2026-05-23 | [IO: Cardano Upgrades](./IO_Cardano Upgrades.html) | Yes | Treasury Withdrawals |
 | 2026-05-23 | [IO: Consensus Initiative (Leios)](./IO_Consensus Initiative.html) | Yes | Treasury Withdrawals |
-| 2026-05-21 | [The First Node in the Browser: A Cardano USP](./The first node in the browser-a Cardano USP.html) | Yes | Treasury Withdrawals |
 | 2026-05-20 | [IO: Developer Experience Initiative](./IO: Developer Experience Initiative.html) | Abstain | Treasury Withdrawals |
 | 2026-05-20 | [Pebble & Ecosystem maintenance: TypeScript core of Cardano](./Pebble and Ecosystem maintenance-TypeScript core of Cardano.html) | Yes | Treasury Withdrawals |
 | 2026-04-29 | [Cardano Summit 2026 and TOKEN2049 Singapore](./Cardano Summit 2026 and TOKEN2049 Singapore.html) | No | Treasury Withdrawals |
