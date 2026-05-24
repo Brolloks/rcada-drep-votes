@@ -19,12 +19,18 @@ Earlier votes were conducted prior to this framework and are not included in thi
 ## Voting Summary
 
 <!-- AUTO-STATS:START -->
-**Committed votes:** 19  
-**Yes:** 9 · **No:** 2 · **Abstain:** 8
+**Committed votes:** 20  
+**Yes:** 9 · **No:** 2 · **Abstain:** 9
 <!-- AUTO-STATS:END -->
 ## Latest
 
 <!-- AUTO-INDEX:START -->
+<div class="vote-card">
+<div class="vote-date">2026-05-24</div>
+<strong><a href="votes/2026/IO & Midgard Labs: L2 Scalability Initiative.html">IO & Midgard Labs: L2 Scalability Initiative</a></strong><br>
+<span class="badge badge-abstain">Abstain</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
 <div class="vote-card">
 <div class="vote-date">2026-05-23</div>
 <strong><a href="votes/2026/IO_Cardano Upgrades.html">IO: Cardano Upgrades</a></strong><br>
@@ -77,12 +83,6 @@ Earlier votes were conducted prior to this framework and are not included in thi
 <div class="vote-date">2026-04-06</div>
 <strong><a href="votes/2026/Cardano Defi Liquidity Budget - Withdrawal 1.html">Cardano DeFi Liquidity Budget - Withdrawal 1</a></strong><br>
 <span class="badge badge-abstain">Abstain</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-04-06</div>
-<strong><a href="votes/2026/Dingo: a Production-Grade Block Producer in Go by Blink Labs.html">Dingo: a Production-Grade Block Producer in Go by Blink Labs</a></strong><br>
-<span class="badge badge-yes">Yes</span>
 <span class="badge badge-type">Treasury Withdrawals</span>
 </div>
 <!-- AUTO-INDEX:END -->
