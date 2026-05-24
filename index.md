@@ -19,8 +19,8 @@ Earlier votes were conducted prior to this framework and are not included in thi
 ## Voting Summary
 
 <!-- AUTO-STATS:START -->
-**Committed votes:** 24  
-**Yes:** 12 · **No:** 2 · **Abstain:** 10
+**Committed votes:** 25  
+**Yes:** 12 · **No:** 2 · **Abstain:** 11
 <!-- AUTO-STATS:END -->
 ## Latest
 
@@ -56,6 +56,12 @@ Earlier votes were conducted prior to this framework and are not included in thi
 <span class="badge badge-type">Treasury Withdrawals</span>
 </div>
 <div class="vote-card">
+<div class="vote-date">2026-05-24</div>
+<strong><a href="votes/2026/Pogun_Capital Without Compromise.html">Pogun: Capital Without Compromise</a></strong><br>
+<span class="badge badge-abstain">Abstain</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
+<div class="vote-card">
 <div class="vote-date">2026-05-23</div>
 <strong><a href="votes/2026/IO_Cardano Upgrades.html">IO: Cardano Upgrades</a></strong><br>
 <span class="badge badge-yes">Yes</span>
@@ -77,12 +83,6 @@ Earlier votes were conducted prior to this framework and are not included in thi
 <div class="vote-date">2026-05-20</div>
 <strong><a href="votes/2026/IO: Developer Experience Initiative.html">IO: Developer Experience Initiative</a></strong><br>
 <span class="badge badge-abstain">Abstain</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-20</div>
-<strong><a href="votes/2026/Pebble and Ecosystem maintenance-TypeScript core of Cardano.html">Pebble & Ecosystem maintenance: TypeScript core of Cardano</a></strong><br>
-<span class="badge badge-yes">Yes</span>
 <span class="badge badge-type">Treasury Withdrawals</span>
 </div>
 <!-- AUTO-INDEX:END -->
