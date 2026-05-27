@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +22,8 @@
     --teal-glow: rgba(0,220,192,0.15);
     --blue: #3b82f6;
     --text-primary: #e8edf5;
-    --text-secondary: #7a8899;
-    --text-dim: #4a5568;
+    --text-secondary: #a8b8c8;
+    --text-dim: #6e8295;
     --yes: #00c896;
     --yes-bg: rgba(0,200,150,0.1);
     --no: #f04f5a;
@@ -46,7 +49,6 @@
     overflow-x: hidden;
   }
 
-  /* grid dot pattern */
   body::before {
     content: '';
     position: fixed;
@@ -57,7 +59,6 @@
     z-index: 0;
   }
 
-  /* top ambient glow */
   body::after {
     content: '';
     position: fixed;
@@ -79,34 +80,44 @@
     padding: 0 1.5rem 4rem;
   }
 
-  /* ── TOPBAR ── */
+  /* TOPBAR */
   .topbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.25rem 0;
+    padding: 1rem 0;
     border-bottom: 1px solid var(--border);
-    margin-bottom: 0;
   }
-  .topbar-brand {
+  .topbar-logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-family: var(--mono);
-    font-size: 13px;
-    color: var(--teal);
-    letter-spacing: 0.05em;
+    gap: 12px;
   }
-  .topbar-brand .dot {
-    width: 8px; height: 8px;
+  .topbar-logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+  }
+  .topbar-live {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.06em;
+  }
+  .topbar-live .dot {
+    width: 7px; height: 7px;
     border-radius: 50%;
     background: var(--teal);
     box-shadow: 0 0 8px var(--teal);
     animation: pulse 2s ease-in-out infinite;
+    flex-shrink: 0;
   }
   @keyframes pulse {
     0%,100% { opacity:1; box-shadow: 0 0 8px var(--teal); }
-    50% { opacity:0.5; box-shadow: 0 0 4px var(--teal); }
+    50% { opacity:0.5; box-shadow: 0 0 3px var(--teal); }
   }
   .topbar-link {
     font-family: var(--mono);
@@ -114,15 +125,16 @@
     color: var(--text-secondary);
     text-decoration: none;
     border: 1px solid var(--border);
-    padding: 6px 14px;
+    padding: 7px 14px;
     border-radius: 6px;
     transition: all 0.2s;
+    white-space: nowrap;
   }
   .topbar-link:hover { border-color: var(--teal); color: var(--teal); }
 
-  /* ── HERO ── */
+  /* HERO */
   .hero {
-    padding: 4rem 0 2.5rem;
+    padding: 3.5rem 0 2.5rem;
     border-bottom: 1px solid var(--border);
   }
   .hero-eyebrow {
@@ -138,18 +150,18 @@
     font-weight: 600;
     line-height: 1.15;
     letter-spacing: -0.02em;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
   }
   .hero h1 span { color: var(--teal); }
   .hero p {
     color: var(--text-secondary);
-    max-width: 560px;
+    max-width: 580px;
     font-size: 15px;
-    line-height: 1.7;
+    line-height: 1.75;
   }
-  .hero p + p { margin-top: 0.5rem; }
+  .hero p + p { margin-top: 0.6rem; }
 
-  /* ── STATS ROW ── */
+  /* STATS */
   .stats-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -176,8 +188,8 @@
     margin-bottom: 6px;
   }
   .stat-num.total { color: var(--text-primary); }
-  .stat-num.yes { color: var(--yes); }
-  .stat-num.no { color: var(--no); }
+  .stat-num.yes   { color: var(--yes); }
+  .stat-num.no    { color: var(--no); }
   .stat-num.abstain { color: var(--abstain); }
   .stat-label {
     font-size: 11px;
@@ -187,7 +199,7 @@
     font-family: var(--mono);
   }
 
-  /* ── SECTION HEADERS ── */
+  /* SECTION HEADER */
   .section-header {
     display: flex;
     align-items: center;
@@ -201,6 +213,7 @@
     letter-spacing: 0.12em;
     color: var(--text-secondary);
     font-weight: 400;
+    white-space: nowrap;
   }
   .section-header::after {
     content: '';
@@ -209,23 +222,19 @@
     background: var(--border);
   }
 
-  /* ── NAV NOTICE ── */
+  /* NAV NOTICE */
   .nav-notice {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 14px 18px;
+    padding: 13px 18px;
     background: var(--teal-dim);
     border: 1px solid rgba(0,220,192,0.2);
     border-radius: var(--radius);
     margin-bottom: 1.5rem;
     font-size: 13px;
   }
-  .nav-notice .icon {
-    color: var(--teal);
-    font-size: 1rem;
-    flex-shrink: 0;
-  }
+  .nav-notice .icon { color: var(--teal); flex-shrink: 0; }
   .nav-notice a {
     color: var(--teal);
     text-decoration: none;
@@ -235,7 +244,7 @@
   .nav-notice a:hover { text-decoration: underline; }
   .nav-notice-label { color: var(--text-secondary); margin-right: 4px; }
 
-  /* ── VOTE CARDS ── */
+  /* VOTE CARDS */
   .vote-list { display: flex; flex-direction: column; gap: 10px; }
 
   .vote-card {
@@ -249,7 +258,6 @@
     align-items: center;
     text-decoration: none;
     transition: border-color 0.2s, background 0.2s, transform 0.15s;
-    cursor: pointer;
     position: relative;
     overflow: hidden;
   }
@@ -259,10 +267,9 @@
     left: 0; top: 0; bottom: 0;
     width: 3px;
     border-radius: 3px 0 0 3px;
-    transition: opacity 0.2s;
   }
-  .vote-card.yes-card::before { background: var(--yes); }
-  .vote-card.no-card::before { background: var(--no); }
+  .vote-card.yes-card::before     { background: var(--yes); }
+  .vote-card.no-card::before      { background: var(--no); }
   .vote-card.abstain-card::before { background: var(--abstain); }
 
   .vote-card:hover {
@@ -284,20 +291,14 @@
     color: var(--text-primary);
     line-height: 1.4;
   }
-  .vote-title a {
-    color: inherit;
-    text-decoration: none;
-  }
-  .vote-title a:hover { color: var(--teal); }
 
   .vote-badges {
     display: flex;
     gap: 6px;
     align-items: center;
-    flex-wrap: nowrap;
   }
 
-  /* ── BADGES ── */
+  /* BADGES */
   .badge {
     font-family: var(--mono);
     font-size: 10px;
@@ -308,12 +309,12 @@
     border-radius: 4px;
     white-space: nowrap;
   }
-  .badge-yes { background: var(--yes-bg); color: var(--yes); border: 1px solid rgba(0,200,150,0.25); }
-  .badge-no { background: var(--no-bg); color: var(--no); border: 1px solid rgba(240,79,90,0.25); }
-  .badge-abstain { background: var(--abstain-bg); color: var(--abstain); border: 1px solid rgba(245,166,35,0.25); }
-  .badge-type { background: var(--type-bg); color: var(--type); border: 1px solid rgba(59,130,246,0.2); font-weight: 400; }
+  .badge-yes     { background: var(--yes-bg);    color: var(--yes);    border: 1px solid rgba(0,200,150,0.25); }
+  .badge-no      { background: var(--no-bg);     color: var(--no);     border: 1px solid rgba(240,79,90,0.25); }
+  .badge-abstain { background: var(--abstain-bg);color: var(--abstain);border: 1px solid rgba(245,166,35,0.25); }
+  .badge-type    { background: var(--type-bg);   color: var(--type);   border: 1px solid rgba(59,130,246,0.2); font-weight: 400; }
 
-  /* ── INFO GRID ── */
+  /* INFO GRID */
   .info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -334,17 +335,13 @@
     color: var(--text-secondary);
     margin-bottom: 0.75rem;
   }
-  .info-card ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
+  .info-card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
   .info-card ul li {
     font-size: 13px;
     color: var(--text-secondary);
     padding-left: 14px;
     position: relative;
+    line-height: 1.5;
   }
   .info-card ul li::before {
     content: '▸';
@@ -352,14 +349,10 @@
     left: 0;
     color: var(--teal);
     font-size: 10px;
-    top: 2px;
+    top: 3px;
   }
 
-  .browse-links {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
+  .browse-links { display: flex; gap: 8px; flex-wrap: wrap; }
   .browse-link {
     font-family: var(--mono);
     font-size: 12px;
@@ -371,10 +364,7 @@
     background: var(--teal-dim);
     transition: all 0.2s;
   }
-  .browse-link:hover {
-    border-color: var(--teal);
-    background: var(--teal-glow);
-  }
+  .browse-link:hover { border-color: var(--teal); background: var(--teal-glow); }
 
   .coverage-note {
     background: var(--bg2);
@@ -385,6 +375,7 @@
     color: var(--text-secondary);
     margin: 1.5rem 0;
     font-family: var(--mono);
+    line-height: 1.7;
   }
   .coverage-note strong { color: var(--text-primary); }
 
@@ -395,47 +386,31 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: gap;
   }
-  .footer-brand {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--text-dim);
-    letter-spacing: 0.08em;
-  }
-  .footer-chain {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--text-dim);
-  }
+  .footer-brand { font-family: var(--mono); font-size: 11px; color: var(--text-dim); letter-spacing: 0.08em; }
+  .footer-chain { font-family: var(--mono); font-size: 11px; color: var(--text-dim); }
   .footer-chain span { color: var(--teal); }
 
-  /* fade-in on load */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(12px);
-    animation: fadeUp 0.5s ease forwards;
-  }
-  @keyframes fadeUp {
-    to { opacity:1; transform:translateY(0); }
-  }
-  .vote-card:nth-child(1)  { animation-delay: 0.05s; }
-  .vote-card:nth-child(2)  { animation-delay: 0.10s; }
-  .vote-card:nth-child(3)  { animation-delay: 0.15s; }
-  .vote-card:nth-child(4)  { animation-delay: 0.20s; }
-  .vote-card:nth-child(5)  { animation-delay: 0.25s; }
-  .vote-card:nth-child(6)  { animation-delay: 0.30s; }
-  .vote-card:nth-child(7)  { animation-delay: 0.35s; }
-  .vote-card:nth-child(8)  { animation-delay: 0.40s; }
-  .vote-card:nth-child(9)  { animation-delay: 0.45s; }
-  .vote-card:nth-child(10) { animation-delay: 0.50s; }
+  /* Staggered fade-in */
+  .fade-in { opacity: 0; transform: translateY(12px); animation: fadeUp 0.5s ease forwards; }
+  @keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+  .vote-list .vote-card:nth-child(1)  { animation-delay: 0.05s; }
+  .vote-list .vote-card:nth-child(2)  { animation-delay: 0.10s; }
+  .vote-list .vote-card:nth-child(3)  { animation-delay: 0.15s; }
+  .vote-list .vote-card:nth-child(4)  { animation-delay: 0.20s; }
+  .vote-list .vote-card:nth-child(5)  { animation-delay: 0.25s; }
+  .vote-list .vote-card:nth-child(6)  { animation-delay: 0.30s; }
+  .vote-list .vote-card:nth-child(7)  { animation-delay: 0.35s; }
+  .vote-list .vote-card:nth-child(8)  { animation-delay: 0.40s; }
+  .vote-list .vote-card:nth-child(9)  { animation-delay: 0.45s; }
+  .vote-list .vote-card:nth-child(10) { animation-delay: 0.50s; }
 
-  @media (max-width: 600px) {
-    .stats-row { grid-template-columns: repeat(2,1fr); }
+  @media (max-width: 620px) {
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
     .info-grid { grid-template-columns: 1fr; }
     .vote-card { grid-template-columns: 1fr; gap: 8px; }
-    .vote-date { font-size: 10px; }
     .vote-badges { flex-wrap: wrap; }
+    .topbar-live { display: none; }
   }
 </style>
 </head>
@@ -444,9 +419,12 @@
 
   <!-- TOPBAR -->
   <nav class="topbar">
-    <div class="topbar-brand">
-      <span class="dot"></span>
-      RCADA · DRep
+    <div class="topbar-logo">
+      <img src="assets/RCADA DREP LOGO.png" alt="RCADA DRep Logo">
+      <div class="topbar-live">
+        <span class="dot"></span>
+        On-chain
+      </div>
     </div>
     <a class="topbar-link" href="RCADA_GOVERNANCE_POLICY.html">Governance Policy →</a>
   </nav>
@@ -459,7 +437,8 @@
     <p>This is the public record of RCADA's governance activity since late 2025, including full vote rationales and structured analysis for each on-chain decision.</p>
   </header>
 
-  <!-- STATS -->
+  <!-- STATS — AUTO-STATS markers preserved for GitHub Actions update script -->
+  <!-- AUTO-STATS:START -->
   <div class="stats-row">
     <div class="stat-cell">
       <span class="stat-num total">25</span>
@@ -478,6 +457,7 @@
       <span class="stat-label">Abstain</span>
     </div>
   </div>
+  <!-- AUTO-STATS:END -->
 
   <!-- NAV NOTICE -->
   <div class="nav-notice">
@@ -491,6 +471,7 @@
     <h2>Latest Votes</h2>
   </div>
 
+  <!-- AUTO-INDEX:START -->
   <div class="vote-list">
     <a class="vote-card abstain-card fade-in" href="votes/2026/Blockfrost_Maintenance and Next Generation Indexing.html">
       <span class="vote-date">2026-05-24</span>
@@ -573,8 +554,9 @@
       </div>
     </a>
   </div>
+  <!-- AUTO-INDEX:END -->
 
-  <!-- INFO SECTION -->
+  <!-- ARCHIVE & REFERENCE -->
   <div class="section-header" style="margin-top:2.5rem;">
     <h2>Archive &amp; Reference</h2>
   </div>
@@ -595,7 +577,7 @@
         <a class="browse-link" href="votes/2026/">2026 votes →</a>
         <a class="browse-link" href="votes/2025/">2025 votes →</a>
       </div>
-      <p style="font-size:12px; color:var(--text-dim); font-family:var(--mono);">
+      <p style="font-size:12px; color:var(--text-dim); font-family:var(--mono); line-height:1.6;">
         "Info" actions = sentiment signals. Treasury &amp; protocol changes assessed against constitutional guardrails.
       </p>
     </div>
