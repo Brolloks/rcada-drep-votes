@@ -491,14 +491,17 @@ body::after {
 .vote-page {
   display: grid;
   grid-template-columns: 1fr 300px;
-  gap: 2.5rem;
+  column-gap: 2.5rem;
+  row-gap: 0;
   align-items: start;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 }
 
 /* Page header spans full width above the columns */
 .vote-page-header {
   grid-column: 1 / -1;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Left column: prose content */
@@ -561,6 +564,10 @@ body::after {
   margin-top: 2.25rem;
   margin-bottom: 0.75rem;
 }
+/* first heading needs no top margin since the header already provides spacing */
+.prose > h1:first-child,
+.prose > h2:first-child,
+.prose > h3:first-child { margin-top: 0; }
 .prose h1 { font-size: 1.6rem; letter-spacing: -0.01em; }
 .prose h2 {
   font-size: 1.15rem;
