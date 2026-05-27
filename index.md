@@ -482,7 +482,7 @@ layout: null
     <nav class="topbar">
       <div class="topbar-left">
         <img class="topbar-logo"
-             src="assets/RCADA DREP LOGO.png"
+             src="assets/RCADA DREP LOGO_bkgcurve.png"
              alt="RCADA DRep Logo">
         <div class="topbar-live">
           <span class="dot"></span>
