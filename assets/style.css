@@ -724,3 +724,51 @@ body::after {
   .topbar-live { display: none; }
   .page-wrap, .site-wrap { padding-left: 1rem; padding-right: 1rem; }
 }
+
+/* ── SIDEBAR EXTRAS ── */
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+.sidebar-ext-link {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--teal);
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid rgba(0,220,192,0.2);
+  border-radius: 5px;
+  background: var(--teal-dim);
+  transition: all 0.2s;
+  display: block;
+}
+.sidebar-ext-link:hover {
+  border-color: var(--teal);
+  background: var(--teal-glow);
+}
+
+.sidebar-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 4px;
+}
+.sidebar-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Status badge (Committed / Pending etc.) */
+.badge-status {
+  background: rgba(110,130,149,0.1);
+  color: var(--text-dim);
+  border: 1px solid rgba(110,130,149,0.2);
+}
