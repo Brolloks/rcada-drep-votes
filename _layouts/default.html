@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} · RCADA DRep{% else %}RCADA DRep Voting Record{% endif %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+
+<div class="logo-banner">
+  <div class="site-wrap" style="padding-top:0;padding-bottom:0;">
+    <nav class="topbar">
+      <div class="topbar-left">
+        <a href="{{ '/' | relative_url }}">
+          <img class="topbar-logo" src="{{ '/assets/RCADA DREP LOGO.png' | relative_url }}" alt="RCADA DRep">
+        </a>
+        <div class="topbar-live">
+          <span class="dot"></span>
+          On-chain
+        </div>
+      </div>
+      <a class="topbar-link" href="{{ '/RCADA_GOVERNANCE_POLICY.html' | relative_url }}">Governance Policy →</a>
+    </nav>
+  </div>
+</div>
+
+<div class="site-wrap">
+
+  {% unless page.url == "/" or page.url == "/index.html" %}
+  <div class="breadcrumb">
+    <a href="{{ '/' | relative_url }}">← All votes</a>
+  </div>
+  {% endunless %}
+
+  {% if page.url == "/" or page.url == "/index.html" %}
+    {{ content }}
+  {% else %}
+  <article class="vote-page">
+
+    {% if page.title %}
+    <header class="vote-page-header">
+      {% if page.vote %}
+        {% assign v = page.vote | downcase %}
+        {% if v == "yes" %}<span class="badge badge-yes">Yes</span>{% endif %}
+        {% if v == "no" %}<span class="badge badge-no">No</span>{% endif %}
+        {% if v == "abstain" %}<span class="badge badge-abstain">Abstain</span>{% endif %}
+      {% endif %}
+      {% if page.type %}<span class="badge badge-type">{{ page.type }}</span>{% endif %}
+      <h1>{{ page.title }}</h1>
+      {% if page.date %}<p class="vote-page-date">{{ page.date | date: "%Y-%m-%d" }}</p>{% endif %}
+    </header>
+    {% endif %}
+
+    <div class="prose">
+      {{ content }}
+    </div>
+
+  </article>
+  {% endif %}
+
+</div>
+
+</body>
+</html>
