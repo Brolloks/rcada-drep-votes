@@ -551,67 +551,65 @@ layout: null
   </div>
 
 <!-- AUTO-INDEX:START -->
-<div class="vote-list">
-  <div class="vote-card fade-in">
-    <div class="vote-date">2026-05-24</div>
-    <strong><a href="votes/2026/Blockfrost_Maintenance and Next Generation Indexing.html">Blockfrost: Maintenance and Next Generation Indexing</a></strong>
-    <span class="badge badge-abstain">Abstain</span>
-    <span class="badge badge-type">Treasury Withdrawals</span>
-  </div>
-  <div class="vote-card fade-in">
-    <div class="vote-date">2026-05-24</div>
-    <strong><a href="votes/2026/IO and Ensurable Systems_Cardano Maintenance Initiative.html">IO &amp; Ensurable Systems: Cardano Maintenance Initiative</a></strong>
-    <span class="badge badge-yes">Yes</span>
-    <span class="badge badge-type">Treasury Withdrawals</span>
-  </div>
-  <div class="vote-card fade-in">
-    <div class="vote-date">2026-05-24</div>
-    <strong><a href="votes/2026/IO and Midgard Labs_L2 Scalability Initiative.html">IO &amp; Midgard Labs: L2 Scalability Initiative</a></strong>
-    <span class="badge badge-abstain">Abstain</span>
-    <span class="badge badge-type">Treasury Withdrawals</span>
-  </div>
-  <div class="vote-card fade-in">
-    <div class="vote-date">2026-05-24</div>
-    <strong><a href="votes/2026/IO & VacuumLabs_Enhancing Plutus - Performance, Correctness, and Usability.html">IO &amp; VacuumLabs: Enhancing Plutus — Performance, Correctness, and Usability</a></strong>
-    <span class="badge badge-yes">Yes</span>
-    <span class="badge badge-type">Treasury Withdrawals</span>
-  </div>
-  <div class="vote-card fade-in">
-    <div class="vote-date">2026-05-24</div>
-    <strong><a href="votes/2026/IO_Cardano High Assurance Technical Collaboration.html">IO: Cardano High Assurance Technical Collaboration</a></strong>
-    <span class="badge badge-yes">Yes</span>
-    <span class="badge badge-type">Treasury Withdrawals</span>
-  </div>
-  <div class="vote-card fade-in">
-    <div class="vote-date">2026-05-24</div>
-    <strong><a href="votes/2026/Pogun_Capital Without Compromise.html">Pogun: Capital Without Compromise</a></strong>
-    <span class="badge badge-abstain">Abstain</span>
-    <span class="badge badge-type">Treasury Withdrawals</span>
-  </div>
-  <div class="vote-card fade-in">
-    <div class="vote-date">2026-05-24</div>
-    <strong><a href="votes/2026/The first node in the browser-a Cardano USP.html">The First Node in the Browser: A Cardano USP</a></strong>
-    <span class="badge badge-yes">Yes</span>
-    <span class="badge badge-type">Treasury Withdrawals</span>
-  </div>
-  <div class="vote-card fade-in">
-    <div class="vote-date">2026-05-23</div>
-    <strong><a href="votes/2026/IO_Cardano Upgrades.html">IO: Cardano Upgrades</a></strong>
-    <span class="badge badge-yes">Yes</span>
-    <span class="badge badge-type">Treasury Withdrawals</span>
-  </div>
-  <div class="vote-card fade-in">
-    <div class="vote-date">2026-05-23</div>
-    <strong><a href="votes/2026/IO_Consensus Initiative.html">IO: Consensus Initiative (Leios)</a></strong>
-    <span class="badge badge-yes">Yes</span>
-    <span class="badge badge-type">Treasury Withdrawals</span>
-  </div>
-  <div class="vote-card fade-in">
-    <div class="vote-date">2026-05-20</div>
-    <strong><a href="votes/2026/IO: Developer Experience Initiative.html">IO: Developer Experience Initiative</a></strong>
-    <span class="badge badge-abstain">Abstain</span>
-    <span class="badge badge-type">Treasury Withdrawals</span>
-  </div>
+<div class="vote-card">
+<div class="vote-date">2026-05-24</div>
+<strong><a href="votes/2026/Blockfrost_Maintenance and Next Generation Indexing.html">Blockfrost: Maintenance and Next Generation Indexing</a></strong><br>
+<span class="badge badge-abstain">Abstain</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-05-24</div>
+<strong><a href="votes/2026/IO and Ensurable Systems_Cardano Maintenance Initiative.html">IO & Ensurable Systems: Cardano Maintenance Initiative</a></strong><br>
+<span class="badge badge-yes">Yes</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-05-24</div>
+<strong><a href="votes/2026/IO and Midgard Labs_L2 Scalability Initiative.html">IO & Midgard Labs: L2 Scalability Initiative</a></strong><br>
+<span class="badge badge-abstain">Abstain</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-05-24</div>
+<strong><a href="votes/2026/IO & VacuumLabs_Enhancing Plutus - Performance, Correctness, and Usability.html">IO & VacuumLabs: Enhancing Plutus - Performance, Correctness, and Usability</a></strong><br>
+<span class="badge badge-yes">Yes</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-05-24</div>
+<strong><a href="votes/2026/IO_Cardano High Assurance Technical Collaboration.html">IO: Cardano High Assurance Technical Collaboration</a></strong><br>
+<span class="badge badge-yes">Yes</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-05-24</div>
+<strong><a href="votes/2026/Pogun_Capital Without Compromise.html">Pogun: Capital Without Compromise</a></strong><br>
+<span class="badge badge-abstain">Abstain</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-05-24</div>
+<strong><a href="votes/2026/The first node in the browser-a Cardano USP.html">The First Node in the Browser: A Cardano USP</a></strong><br>
+<span class="badge badge-yes">Yes</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-05-23</div>
+<strong><a href="votes/2026/IO_Cardano Upgrades.html">IO: Cardano Upgrades</a></strong><br>
+<span class="badge badge-yes">Yes</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-05-23</div>
+<strong><a href="votes/2026/IO_Consensus Initiative.html">IO: Consensus Initiative (Leios)</a></strong><br>
+<span class="badge badge-yes">Yes</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
+</div>
+<div class="vote-card">
+<div class="vote-date">2026-05-20</div>
+<strong><a href="votes/2026/IO: Developer Experience Initiative.html">IO: Developer Experience Initiative</a></strong><br>
+<span class="badge badge-abstain">Abstain</span>
+<span class="badge badge-type">Treasury Withdrawals</span>
 </div>
 <!-- AUTO-INDEX:END -->
 
