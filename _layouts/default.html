@@ -29,18 +29,14 @@
 
 <div class="site-wrap">
 
-  {% unless page.url == "/" or page.url == "/index.html" %}
-  <div class="breadcrumb">
-    <a href="{{ '/' | relative_url }}">← All votes</a>
-  </div>
-  {% endunless %}
+  {% if page.url == "/" or page.url == "/index.html" or page.url == "/index.md" %}
 
-  {% if page.url == "/" or page.url == "/index.html" %}
     {{ content }}
+
   {% else %}
+
   <article class="vote-page">
 
-    {% if page.title %}
     <header class="vote-page-header">
       {% if page.vote %}
         {% assign v = page.vote | downcase %}
@@ -49,16 +45,67 @@
         {% if v == "abstain" %}<span class="badge badge-abstain">Abstain</span>{% endif %}
       {% endif %}
       {% if page.type %}<span class="badge badge-type">{{ page.type }}</span>{% endif %}
-      <h1>{{ page.title }}</h1>
+      {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
       {% if page.date %}<p class="vote-page-date">{{ page.date | date: "%Y-%m-%d" }}</p>{% endif %}
     </header>
-    {% endif %}
 
     <div class="prose">
       {{ content }}
     </div>
 
+    <aside class="vote-sidebar">
+      <a class="sidebar-back" href="{{ '/' | relative_url }}">← All votes</a>
+
+      {% if page.vote %}
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Vote cast</div>
+        <div class="sidebar-card-value">
+          {% assign v = page.vote | downcase %}
+          {% if v == "yes" %}<span class="badge badge-yes">Yes</span>{% endif %}
+          {% if v == "no" %}<span class="badge badge-no">No</span>{% endif %}
+          {% if v == "abstain" %}<span class="badge badge-abstain">Abstain</span>{% endif %}
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.type %}
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Action type</div>
+        <div class="sidebar-card-value">{{ page.type }}</div>
+      </div>
+      {% endif %}
+
+      {% if page.date %}
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Vote date</div>
+        <div class="sidebar-card-value">{{ page.date | date: "%d %b %Y" }}</div>
+      </div>
+      {% endif %}
+
+      {% if page.action_id %}
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Action ID</div>
+        <div class="sidebar-card-value" style="font-family:var(--mono);font-size:11px;word-break:break-all;">{{ page.action_id }}</div>
+      </div>
+      {% endif %}
+
+      {% if page.amount %}
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Treasury ask</div>
+        <div class="sidebar-card-value"><strong>{{ page.amount }}</strong></div>
+      </div>
+      {% endif %}
+
+      {% if page.expiry %}
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Expires epoch</div>
+        <div class="sidebar-card-value">{{ page.expiry }}</div>
+      </div>
+      {% endif %}
+    </aside>
+
   </article>
+
   {% endif %}
 
 </div>
