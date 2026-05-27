@@ -37,6 +37,7 @@
 
   <article class="vote-page">
 
+    <!-- Full-width header above the two columns -->
     <header class="vote-page-header">
       {% if page.vote %}
         {% assign v = page.vote | downcase %}
@@ -45,17 +46,22 @@
         {% if v == "abstain" %}<span class="badge badge-abstain">Abstain</span>{% endif %}
       {% endif %}
       {% if page.type %}<span class="badge badge-type">{{ page.type }}</span>{% endif %}
+      {% if page.status %}<span class="badge badge-status">{{ page.status }}</span>{% endif %}
       {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
-      {% if page.date %}<p class="vote-page-date">{{ page.date | date: "%Y-%m-%d" }}</p>{% endif %}
+      {% if page.vote_date %}<p class="vote-page-date">{{ page.vote_date }}</p>{% endif %}
     </header>
 
+    <!-- Left column: prose -->
     <div class="prose">
       {{ content }}
     </div>
 
+    <!-- Right column: sticky sidebar -->
     <aside class="vote-sidebar">
+
       <a class="sidebar-back" href="{{ '/' | relative_url }}">← All votes</a>
 
+      <!-- Vote result -->
       {% if page.vote %}
       <div class="sidebar-card">
         <div class="sidebar-card-title">Vote cast</div>
@@ -68,6 +74,14 @@
       </div>
       {% endif %}
 
+      <!-- Key metadata -->
+      {% if page.vote_date %}
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Vote date</div>
+        <div class="sidebar-card-value">{{ page.vote_date }}</div>
+      </div>
+      {% endif %}
+
       {% if page.type %}
       <div class="sidebar-card">
         <div class="sidebar-card-title">Action type</div>
@@ -75,33 +89,83 @@
       </div>
       {% endif %}
 
-      {% if page.date %}
+      {% if page.expires %}
       <div class="sidebar-card">
-        <div class="sidebar-card-title">Vote date</div>
-        <div class="sidebar-card-value">{{ page.date | date: "%d %b %Y" }}</div>
+        <div class="sidebar-card-title">Expires</div>
+        <div class="sidebar-card-value">{{ page.expires }}</div>
       </div>
       {% endif %}
 
-      {% if page.action_id %}
+      {% if page.status %}
       <div class="sidebar-card">
-        <div class="sidebar-card-title">Action ID</div>
-        <div class="sidebar-card-value" style="font-family:var(--mono);font-size:11px;word-break:break-all;">{{ page.action_id }}</div>
+        <div class="sidebar-card-title">Status</div>
+        <div class="sidebar-card-value">{{ page.status }}</div>
       </div>
       {% endif %}
 
-      {% if page.amount %}
+      {% if page.constitution_version %}
       <div class="sidebar-card">
-        <div class="sidebar-card-title">Treasury ask</div>
-        <div class="sidebar-card-value"><strong>{{ page.amount }}</strong></div>
+        <div class="sidebar-card-title">Constitution</div>
+        <div class="sidebar-card-value" style="font-size:12px;">{{ page.constitution_version }}</div>
       </div>
       {% endif %}
 
-      {% if page.expiry %}
+      <!-- Action ID -->
+      {% if page.gov_action_id %}
       <div class="sidebar-card">
-        <div class="sidebar-card-title">Expires epoch</div>
-        <div class="sidebar-card-value">{{ page.expiry }}</div>
+        <div class="sidebar-card-title">Gov action ID</div>
+        <div class="sidebar-card-value" style="font-family:var(--mono);font-size:10px;word-break:break-all;line-height:1.6;">{{ page.gov_action_id }}</div>
       </div>
       {% endif %}
+
+      <!-- External links -->
+      {% if page.links %}
+        {% assign has_link = false %}
+        {% if page.links.adastat and page.links.adastat != "" %}{% assign has_link = true %}{% endif %}
+        {% if page.links.govtool and page.links.govtool != "" %}{% assign has_link = true %}{% endif %}
+        {% if page.links.forum and page.links.forum != "" %}{% assign has_link = true %}{% endif %}
+        {% if page.links.ipfs and page.links.ipfs != "" %}{% assign has_link = true %}{% endif %}
+        {% if has_link %}
+        <div class="sidebar-card">
+          <div class="sidebar-card-title">External links</div>
+          <div class="sidebar-links">
+            {% if page.links.adastat and page.links.adastat != "" %}
+              <a href="{{ page.links.adastat }}" target="_blank" rel="noopener" class="sidebar-ext-link">
+                Adastat ↗
+              </a>
+            {% endif %}
+            {% if page.links.govtool and page.links.govtool != "" %}
+              <a href="{{ page.links.govtool }}" target="_blank" rel="noopener" class="sidebar-ext-link">
+                GovTool ↗
+              </a>
+            {% endif %}
+            {% if page.links.forum and page.links.forum != "" %}
+              <a href="{{ page.links.forum }}" target="_blank" rel="noopener" class="sidebar-ext-link">
+                Forum ↗
+              </a>
+            {% endif %}
+            {% if page.links.ipfs and page.links.ipfs != "" %}
+              <a href="{{ page.links.ipfs }}" target="_blank" rel="noopener" class="sidebar-ext-link">
+                IPFS ↗
+              </a>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+      {% endif %}
+
+      <!-- Tags -->
+      {% if page.tags %}
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Tags</div>
+        <div class="sidebar-tags">
+          {% for tag in page.tags %}
+            <span class="sidebar-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
     </aside>
 
   </article>
@@ -109,6 +173,5 @@
   {% endif %}
 
 </div>
-
 </body>
 </html>
