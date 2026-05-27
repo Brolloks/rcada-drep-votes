@@ -15,12 +15,13 @@ layout: null
     --bg2: #0d1220;
     --bg3: #121828;
     --card: #0f1520;
+    --banner: #0b1622;
+    --banner-border: rgba(0,220,192,0.22);
     --border: rgba(0,220,190,0.12);
-    --border-hover: rgba(0,220,190,0.3);
+    --border-hover: rgba(0,220,190,0.32);
     --teal: #00dcc0;
     --teal-dim: rgba(0,220,192,0.08);
     --teal-glow: rgba(0,220,192,0.15);
-    --blue: #3b82f6;
     --text-primary: #e8edf5;
     --text-secondary: #a8b8c8;
     --text-dim: #6e8295;
@@ -49,25 +50,27 @@ layout: null
     overflow-x: hidden;
   }
 
+  /* dot grid background */
   body::before {
     content: '';
     position: fixed;
     inset: 0;
-    background-image: radial-gradient(circle, rgba(0,220,192,0.07) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(0,220,192,0.06) 1px, transparent 1px);
     background-size: 32px 32px;
     pointer-events: none;
     z-index: 0;
   }
 
+  /* top ambient glow */
   body::after {
     content: '';
     position: fixed;
-    top: -200px;
+    top: -180px;
     left: 50%;
     transform: translateX(-50%);
-    width: 800px;
+    width: 900px;
     height: 400px;
-    background: radial-gradient(ellipse at center, rgba(0,180,160,0.08) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(0,180,160,0.07) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
   }
@@ -75,53 +78,73 @@ layout: null
   .page-wrap {
     position: relative;
     z-index: 1;
-    max-width: 820px;
+    max-width: 840px;
     margin: 0 auto;
-    padding: 0 1.5rem 4rem;
+    padding: 0 1.5rem 5rem;
   }
 
-  /* TOPBAR */
+  /* ── LOGO BANNER ── */
+  .logo-banner {
+    background: var(--banner);
+    border-bottom: 1px solid var(--banner-border);
+    margin: 0 -1.5rem 0;
+    padding: 0 1.5rem;
+    position: relative;
+  }
+  /* subtle teal left-edge glow on the banner */
+  .logo-banner::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--teal), transparent);
+    opacity: 0.6;
+  }
   .topbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--border);
+    padding: 0.9rem 0;
+    gap: 1rem;
   }
-  .topbar-logo {
+  .topbar-left {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
   }
-  .topbar-logo img {
-    height: 40px;
+  .topbar-logo {
+    height: 42px;
     width: auto;
     display: block;
+    /* slight drop shadow so transparent logo edges show on dark bg */
+    filter: drop-shadow(0 0 8px rgba(0,220,192,0.18));
   }
   .topbar-live {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 7px;
     font-family: var(--mono);
     font-size: 11px;
     color: var(--text-dim);
-    letter-spacing: 0.06em;
+    letter-spacing: 0.07em;
+    border-left: 1px solid var(--border);
+    padding-left: 14px;
   }
   .topbar-live .dot {
     width: 7px; height: 7px;
     border-radius: 50%;
     background: var(--teal);
     box-shadow: 0 0 8px var(--teal);
-    animation: pulse 2s ease-in-out infinite;
+    animation: blink 2.2s ease-in-out infinite;
     flex-shrink: 0;
   }
-  @keyframes pulse {
+  @keyframes blink {
     0%,100% { opacity:1; box-shadow: 0 0 8px var(--teal); }
-    50% { opacity:0.5; box-shadow: 0 0 3px var(--teal); }
+    50% { opacity:0.4; box-shadow: 0 0 3px var(--teal); }
   }
   .topbar-link {
     font-family: var(--mono);
-    font-size: 12px;
+    font-size: 11px;
     color: var(--text-secondary);
     text-decoration: none;
     border: 1px solid var(--border);
@@ -132,7 +155,7 @@ layout: null
   }
   .topbar-link:hover { border-color: var(--teal); color: var(--teal); }
 
-  /* HERO */
+  /* ── HERO ── */
   .hero {
     padding: 3.5rem 0 2.5rem;
     border-bottom: 1px solid var(--border);
@@ -140,7 +163,7 @@ layout: null
   .hero-eyebrow {
     font-family: var(--mono);
     font-size: 11px;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.16em;
     color: var(--teal);
     text-transform: uppercase;
     margin-bottom: 1rem;
@@ -152,7 +175,7 @@ layout: null
     letter-spacing: -0.02em;
     margin-bottom: 1.25rem;
   }
-  .hero h1 span { color: var(--teal); }
+  .hero h1 .accent { color: var(--teal); }
   .hero p {
     color: var(--text-secondary);
     max-width: 580px;
@@ -161,7 +184,7 @@ layout: null
   }
   .hero p + p { margin-top: 0.6rem; }
 
-  /* STATS */
+  /* ── STATS ── */
   .stats-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -171,6 +194,10 @@ layout: null
     border-radius: var(--radius);
     overflow: hidden;
     margin: 2rem 0;
+  }
+  /* hide the raw markdown text the auto-script dumps between the markers */
+  #stats-raw {
+    display: none;
   }
   .stat-cell {
     background: var(--card);
@@ -187,9 +214,9 @@ layout: null
     line-height: 1;
     margin-bottom: 6px;
   }
-  .stat-num.total { color: var(--text-primary); }
-  .stat-num.yes   { color: var(--yes); }
-  .stat-num.no    { color: var(--no); }
+  .stat-num.total   { color: var(--text-primary); }
+  .stat-num.yes     { color: var(--yes); }
+  .stat-num.no      { color: var(--no); }
   .stat-num.abstain { color: var(--abstain); }
   .stat-label {
     font-size: 11px;
@@ -199,7 +226,7 @@ layout: null
     font-family: var(--mono);
   }
 
-  /* SECTION HEADER */
+  /* ── SECTION HEADER ── */
   .section-header {
     display: flex;
     align-items: center;
@@ -222,7 +249,7 @@ layout: null
     background: var(--border);
   }
 
-  /* NAV NOTICE */
+  /* ── NAV NOTICE ── */
   .nav-notice {
     display: flex;
     align-items: center;
@@ -244,23 +271,27 @@ layout: null
   .nav-notice a:hover { text-decoration: underline; }
   .nav-notice-label { color: var(--text-secondary); margin-right: 4px; }
 
-  /* VOTE CARDS */
+  /* ── VOTE CARDS ──
+     Supports BOTH formats:
+     1. Our <a class="vote-card yes-card"> with 3-column grid children
+     2. Auto-script <div class="vote-card"> with date div + strong a + badges
+  */
   .vote-list { display: flex; flex-direction: column; gap: 10px; }
 
   .vote-card {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 1rem 1.25rem;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 0 1.25rem;
-    align-items: center;
+    padding: 1rem 1.25rem 1rem 1.4rem;
     text-decoration: none;
     transition: border-color 0.2s, background 0.2s, transform 0.15s;
     position: relative;
     overflow: hidden;
+    display: block;
+    color: var(--text-primary);
   }
+
+  /* coloured left-bar — via explicit class OR :has() for auto-script cards */
   .vote-card::before {
     content: '';
     position: absolute;
@@ -268,9 +299,12 @@ layout: null
     width: 3px;
     border-radius: 3px 0 0 3px;
   }
-  .vote-card.yes-card::before     { background: var(--yes); }
-  .vote-card.no-card::before      { background: var(--no); }
-  .vote-card.abstain-card::before { background: var(--abstain); }
+  .vote-card.yes-card::before,
+  .vote-card:has(.badge-yes)::before     { background: var(--yes); }
+  .vote-card.no-card::before,
+  .vote-card:has(.badge-no)::before      { background: var(--no); }
+  .vote-card.abstain-card::before,
+  .vote-card:has(.badge-abstain)::before { background: var(--abstain); }
 
   .vote-card:hover {
     border-color: var(--border-hover);
@@ -278,27 +312,55 @@ layout: null
     transform: translateX(2px);
   }
 
+  /* date — works for both <span class="vote-date"> and <div class="vote-date"> */
   .vote-date {
     font-family: var(--mono);
     font-size: 11px;
     color: var(--text-dim);
-    white-space: nowrap;
+    display: block;
+    margin-bottom: 4px;
   }
 
+  /* title — our format */
   .vote-title {
     font-size: 14px;
     font-weight: 500;
     color: var(--text-primary);
     line-height: 1.4;
+    display: block;
+    margin-bottom: 8px;
   }
 
+  /* title — auto-script format: <strong><a href>Title</a></strong> */
+  .vote-card > strong,
+  .vote-card strong {
+    display: block;
+    margin-bottom: 8px;
+  }
+  .vote-card > strong > a,
+  .vote-card strong > a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-decoration: none;
+    line-height: 1.4;
+  }
+  .vote-card > strong > a:hover,
+  .vote-card strong > a:hover { color: var(--teal); }
+
+  /* badges row — works for both formats */
   .vote-badges {
     display: flex;
     gap: 6px;
     align-items: center;
+    flex-wrap: wrap;
+    margin-top: 6px;
   }
 
-  /* BADGES */
+  /* auto-script puts badges directly in .vote-card after a <br>, flex them */
+  .vote-card > .badge { display: inline-flex; margin-top: 6px; margin-right: 6px; }
+
+  /* ── BADGES ── */
   .badge {
     font-family: var(--mono);
     font-size: 10px;
@@ -309,12 +371,12 @@ layout: null
     border-radius: 4px;
     white-space: nowrap;
   }
-  .badge-yes     { background: var(--yes-bg);    color: var(--yes);    border: 1px solid rgba(0,200,150,0.25); }
-  .badge-no      { background: var(--no-bg);     color: var(--no);     border: 1px solid rgba(240,79,90,0.25); }
-  .badge-abstain { background: var(--abstain-bg);color: var(--abstain);border: 1px solid rgba(245,166,35,0.25); }
-  .badge-type    { background: var(--type-bg);   color: var(--type);   border: 1px solid rgba(59,130,246,0.2); font-weight: 400; }
+  .badge-yes     { background: var(--yes-bg);     color: var(--yes);     border: 1px solid rgba(0,200,150,0.25); }
+  .badge-no      { background: var(--no-bg);      color: var(--no);      border: 1px solid rgba(240,79,90,0.25); }
+  .badge-abstain { background: var(--abstain-bg); color: var(--abstain); border: 1px solid rgba(245,166,35,0.25); }
+  .badge-type    { background: var(--type-bg);    color: var(--type);    border: 1px solid rgba(59,130,246,0.2); font-weight: 400; }
 
-  /* INFO GRID */
+  /* ── INFO GRID ── */
   .info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -336,14 +398,14 @@ layout: null
     margin-bottom: 0.75rem;
   }
   .info-card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-  .info-card ul li {
+  .info-card li {
     font-size: 13px;
     color: var(--text-secondary);
     padding-left: 14px;
     position: relative;
     line-height: 1.5;
   }
-  .info-card ul li::before {
+  .info-card li::before {
     content: '▸';
     position: absolute;
     left: 0;
@@ -391,63 +453,96 @@ layout: null
   .footer-chain { font-family: var(--mono); font-size: 11px; color: var(--text-dim); }
   .footer-chain span { color: var(--teal); }
 
-  /* Staggered fade-in */
-  .fade-in { opacity: 0; transform: translateY(12px); animation: fadeUp 0.5s ease forwards; }
+  /* staggered card animation */
+  .fade-in { opacity: 0; transform: translateY(10px); animation: fadeUp 0.45s ease forwards; }
   @keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
-  .vote-list .vote-card:nth-child(1)  { animation-delay: 0.05s; }
-  .vote-list .vote-card:nth-child(2)  { animation-delay: 0.10s; }
-  .vote-list .vote-card:nth-child(3)  { animation-delay: 0.15s; }
-  .vote-list .vote-card:nth-child(4)  { animation-delay: 0.20s; }
-  .vote-list .vote-card:nth-child(5)  { animation-delay: 0.25s; }
-  .vote-list .vote-card:nth-child(6)  { animation-delay: 0.30s; }
-  .vote-list .vote-card:nth-child(7)  { animation-delay: 0.35s; }
-  .vote-list .vote-card:nth-child(8)  { animation-delay: 0.40s; }
-  .vote-list .vote-card:nth-child(9)  { animation-delay: 0.45s; }
-  .vote-list .vote-card:nth-child(10) { animation-delay: 0.50s; }
+  .vote-list .vote-card:nth-child(1)  { animation-delay: 0.04s; }
+  .vote-list .vote-card:nth-child(2)  { animation-delay: 0.08s; }
+  .vote-list .vote-card:nth-child(3)  { animation-delay: 0.12s; }
+  .vote-list .vote-card:nth-child(4)  { animation-delay: 0.16s; }
+  .vote-list .vote-card:nth-child(5)  { animation-delay: 0.20s; }
+  .vote-list .vote-card:nth-child(6)  { animation-delay: 0.24s; }
+  .vote-list .vote-card:nth-child(7)  { animation-delay: 0.28s; }
+  .vote-list .vote-card:nth-child(8)  { animation-delay: 0.32s; }
+  .vote-list .vote-card:nth-child(9)  { animation-delay: 0.36s; }
+  .vote-list .vote-card:nth-child(10) { animation-delay: 0.40s; }
 
   @media (max-width: 620px) {
     .stats-row { grid-template-columns: repeat(2, 1fr); }
     .info-grid { grid-template-columns: 1fr; }
-    .vote-card { grid-template-columns: 1fr; gap: 8px; }
-    .vote-badges { flex-wrap: wrap; }
     .topbar-live { display: none; }
   }
 </style>
 </head>
 <body>
-<div class="page-wrap">
 
-  <!-- TOPBAR -->
-  <nav class="topbar">
-    <div class="topbar-logo">
-      <img src="assets/RCADA DREP LOGO.png" alt="RCADA DRep Logo">
-      <div class="topbar-live">
-        <span class="dot"></span>
-        On-chain
+<!-- full-width logo banner -->
+<div class="logo-banner">
+  <div class="page-wrap" style="padding-top:0; padding-bottom:0;">
+    <nav class="topbar">
+      <div class="topbar-left">
+        <img class="topbar-logo"
+             src="assets/RCADA DREP LOGO.png"
+             alt="RCADA DRep Logo">
+        <div class="topbar-live">
+          <span class="dot"></span>
+          On-chain
+        </div>
       </div>
-    </div>
-    <a class="topbar-link" href="RCADA_GOVERNANCE_POLICY.html">Governance Policy →</a>
-  </nav>
+      <a class="topbar-link" href="RCADA_GOVERNANCE_POLICY.html">Governance Policy →</a>
+    </nav>
+  </div>
+</div>
+
+<div class="page-wrap">
 
   <!-- HERO -->
   <header class="hero">
     <p class="hero-eyebrow">On-chain governance · Cardano</p>
-    <h1>RCADA <span>DRep</span><br>Voting Record</h1>
+    <h1>RCADA <span class="accent">DRep</span><br>Voting Record</h1>
     <p>RCADA represents delegators through a Constitution-first, transparent, and sustainability-focused approach to governance.</p>
     <p>This is the public record of RCADA's governance activity since late 2025, including full vote rationales and structured analysis for each on-chain decision.</p>
   </header>
 
-  <!-- STATS — AUTO-STATS markers preserved for GitHub Actions update script -->
-  <!-- AUTO-STATS:START -->
+  <!-- STATS DISPLAY (always visible, populated by JS from raw data below) -->
+  <div class="stats-row">
+    <div class="stat-cell">
+      <span class="stat-num total" id="stat-total">25</span>
+      <span class="stat-label">Total Votes</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num yes" id="stat-yes">12</span>
+      <span class="stat-label">Yes</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num no" id="stat-no">2</span>
+      <span class="stat-label">No</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num abstain" id="stat-abstain">11</span>
+      <span class="stat-label">Abstain</span>
+    </div>
+  </div>
+
+  <!--
+    AUTO-STATS:START
+    The auto-update script writes markdown stats between these markers.
+    The hidden div below captures that text; JS reads & parses it to update the display above.
+  -->
+  <div id="stats-raw">
+<!-- AUTO-STATS:START -->
 **Committed votes:** 25  
 **Yes:** 12 · **No:** 2 · **Abstain:** 11
 <!-- AUTO-STATS:END -->
+  </div>
 
   <!-- NAV NOTICE -->
   <div class="nav-notice">
     <span class="icon">⬡</span>
-    <span><span class="nav-notice-label">Start here:</span>
-    <a href="RCADA_GOVERNANCE_POLICY.html">RCADA DRep Governance Policy</a></span>
+    <span>
+      <span class="nav-notice-label">Start here:</span>
+      <a href="RCADA_GOVERNANCE_POLICY.html">RCADA DRep Governance Policy</a>
+    </span>
   </div>
 
   <!-- LATEST VOTES -->
@@ -455,66 +550,68 @@ layout: null
     <h2>Latest Votes</h2>
   </div>
 
-  <!-- AUTO-INDEX:START -->
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/Blockfrost_Maintenance and Next Generation Indexing.html">Blockfrost: Maintenance and Next Generation Indexing</a></strong><br>
-<span class="badge badge-abstain">Abstain</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/IO and Ensurable Systems_Cardano Maintenance Initiative.html">IO & Ensurable Systems: Cardano Maintenance Initiative</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/IO and Midgard Labs_L2 Scalability Initiative.html">IO & Midgard Labs: L2 Scalability Initiative</a></strong><br>
-<span class="badge badge-abstain">Abstain</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/IO & VacuumLabs_Enhancing Plutus - Performance, Correctness, and Usability.html">IO & VacuumLabs: Enhancing Plutus - Performance, Correctness, and Usability</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/IO_Cardano High Assurance Technical Collaboration.html">IO: Cardano High Assurance Technical Collaboration</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/Pogun_Capital Without Compromise.html">Pogun: Capital Without Compromise</a></strong><br>
-<span class="badge badge-abstain">Abstain</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/The first node in the browser-a Cardano USP.html">The First Node in the Browser: A Cardano USP</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-23</div>
-<strong><a href="votes/2026/IO_Cardano Upgrades.html">IO: Cardano Upgrades</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-23</div>
-<strong><a href="votes/2026/IO_Consensus Initiative.html">IO: Consensus Initiative (Leios)</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-20</div>
-<strong><a href="votes/2026/IO: Developer Experience Initiative.html">IO: Developer Experience Initiative</a></strong><br>
-<span class="badge badge-abstain">Abstain</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
+<!-- AUTO-INDEX:START -->
+<div class="vote-list">
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-24</div>
+    <strong><a href="votes/2026/Blockfrost_Maintenance and Next Generation Indexing.html">Blockfrost: Maintenance and Next Generation Indexing</a></strong>
+    <span class="badge badge-abstain">Abstain</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-24</div>
+    <strong><a href="votes/2026/IO and Ensurable Systems_Cardano Maintenance Initiative.html">IO &amp; Ensurable Systems: Cardano Maintenance Initiative</a></strong>
+    <span class="badge badge-yes">Yes</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-24</div>
+    <strong><a href="votes/2026/IO and Midgard Labs_L2 Scalability Initiative.html">IO &amp; Midgard Labs: L2 Scalability Initiative</a></strong>
+    <span class="badge badge-abstain">Abstain</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-24</div>
+    <strong><a href="votes/2026/IO & VacuumLabs_Enhancing Plutus - Performance, Correctness, and Usability.html">IO &amp; VacuumLabs: Enhancing Plutus — Performance, Correctness, and Usability</a></strong>
+    <span class="badge badge-yes">Yes</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-24</div>
+    <strong><a href="votes/2026/IO_Cardano High Assurance Technical Collaboration.html">IO: Cardano High Assurance Technical Collaboration</a></strong>
+    <span class="badge badge-yes">Yes</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-24</div>
+    <strong><a href="votes/2026/Pogun_Capital Without Compromise.html">Pogun: Capital Without Compromise</a></strong>
+    <span class="badge badge-abstain">Abstain</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-24</div>
+    <strong><a href="votes/2026/The first node in the browser-a Cardano USP.html">The First Node in the Browser: A Cardano USP</a></strong>
+    <span class="badge badge-yes">Yes</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-23</div>
+    <strong><a href="votes/2026/IO_Cardano Upgrades.html">IO: Cardano Upgrades</a></strong>
+    <span class="badge badge-yes">Yes</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-23</div>
+    <strong><a href="votes/2026/IO_Consensus Initiative.html">IO: Consensus Initiative (Leios)</a></strong>
+    <span class="badge badge-yes">Yes</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-20</div>
+    <strong><a href="votes/2026/IO: Developer Experience Initiative.html">IO: Developer Experience Initiative</a></strong>
+    <span class="badge badge-abstain">Abstain</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
 </div>
 <!-- AUTO-INDEX:END -->
 
@@ -539,7 +636,7 @@ layout: null
         <a class="browse-link" href="votes/2026/">2026 votes →</a>
         <a class="browse-link" href="votes/2025/">2025 votes →</a>
       </div>
-      <p style="font-size:12px; color:var(--text-dim); font-family:var(--mono); line-height:1.6;">
+      <p style="font-size:12px;color:var(--text-dim);font-family:var(--mono);line-height:1.6;">
         "Info" actions = sentiment signals. Treasury &amp; protocol changes assessed against constitutional guardrails.
       </p>
     </div>
@@ -549,12 +646,37 @@ layout: null
     <strong>Historical coverage:</strong> This archive reflects RCADA's structured governance methodology introduced in late 2025. Earlier votes were conducted prior to this framework and are not included.
   </div>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <span class="footer-brand">RCADA · DRep Governance</span>
     <span class="footer-chain">Powered by <span>Cardano</span></span>
   </footer>
 
-</div>
+</div><!-- /page-wrap -->
+
+<script>
+// Parse markdown stats written by auto-update script and populate the stats display.
+// The script writes e.g. "**Committed votes:** 25  \n**Yes:** 12 · **No:** 2 · **Abstain:** 11"
+// between the AUTO-STATS comment markers inside #stats-raw.
+(function() {
+  var raw = document.getElementById('stats-raw');
+  if (!raw) return;
+  var text = raw.textContent || '';
+
+  function extract(pattern) {
+    var m = text.match(pattern);
+    return m ? m[1] : null;
+  }
+
+  var total   = extract(/Committed\s+votes[^0-9]*(\d+)/i);
+  var yes     = extract(/Yes[^0-9]*(\d+)/i);
+  var no      = extract(/\bNo[^0-9]*(\d+)/i);
+  var abstain = extract(/Abstain[^0-9]*(\d+)/i);
+
+  if (total)   document.getElementById('stat-total').textContent   = total;
+  if (yes)     document.getElementById('stat-yes').textContent     = yes;
+  if (no)      document.getElementById('stat-no').textContent      = no;
+  if (abstain) document.getElementById('stat-abstain').textContent = abstain;
+})();
+</script>
 </body>
 </html>
