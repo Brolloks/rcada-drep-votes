@@ -1,104 +1,616 @@
-<link rel="stylesheet" href="assets/style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RCADA DRep Voting Record</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080c14;
+    --bg2: #0d1220;
+    --bg3: #121828;
+    --card: #0f1520;
+    --border: rgba(0,220,190,0.12);
+    --border-hover: rgba(0,220,190,0.3);
+    --teal: #00dcc0;
+    --teal-dim: rgba(0,220,192,0.08);
+    --teal-glow: rgba(0,220,192,0.15);
+    --blue: #3b82f6;
+    --text-primary: #e8edf5;
+    --text-secondary: #7a8899;
+    --text-dim: #4a5568;
+    --yes: #00c896;
+    --yes-bg: rgba(0,200,150,0.1);
+    --no: #f04f5a;
+    --no-bg: rgba(240,79,90,0.1);
+    --abstain: #f5a623;
+    --abstain-bg: rgba(245,166,35,0.1);
+    --type-bg: rgba(59,130,246,0.1);
+    --type: #6ba3f7;
+    --mono: 'Space Mono', monospace;
+    --sans: 'DM Sans', sans-serif;
+    --radius: 10px;
+  }
 
-<div class="site-hero">
-<h2>RCADA DRep Voting Record</h2>
-<p>RCADA represents delegators through a Constitution-first, transparent, and sustainability-focused approach to governance.</p>
-<p>This site is the public record of RCADA’s governance activity since late 2025, including full vote rationales and structured analysis for each on-chain decision.</p>
-</div>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<div class="nav-box">
-<strong>Start here:</strong> <a href="RCADA_GOVERNANCE_POLICY.html">RCADA DRep Governance Policy</a>
-</div>
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
 
-## Historical Coverage
+  /* grid dot pattern */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(0,220,192,0.07) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+    z-index: 0;
+  }
 
-This archive reflects RCADA’s structured governance methodology introduced in late 2025.
+  /* top ambient glow */
+  body::after {
+    content: '';
+    position: fixed;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 400px;
+    background: radial-gradient(ellipse at center, rgba(0,180,160,0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
 
-Earlier votes were conducted prior to this framework and are not included in this repository.
+  .page-wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+  }
 
-## Voting Summary
+  /* ── TOPBAR ── */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0;
+  }
+  .topbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--teal);
+    letter-spacing: 0.05em;
+  }
+  .topbar-brand .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--teal);
+    box-shadow: 0 0 8px var(--teal);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%,100% { opacity:1; box-shadow: 0 0 8px var(--teal); }
+    50% { opacity:0.5; box-shadow: 0 0 4px var(--teal); }
+  }
+  .topbar-link {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  .topbar-link:hover { border-color: var(--teal); color: var(--teal); }
 
-<!-- AUTO-STATS:START -->
-**Committed votes:** 25  
-**Yes:** 12 · **No:** 2 · **Abstain:** 11
-<!-- AUTO-STATS:END -->
-## Latest
+  /* ── HERO ── */
+  .hero {
+    padding: 4rem 0 2.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--teal);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+  .hero h1 span { color: var(--teal); }
+  .hero p {
+    color: var(--text-secondary);
+    max-width: 560px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .hero p + p { margin-top: 0.5rem; }
 
-<!-- AUTO-INDEX:START -->
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/Blockfrost_Maintenance and Next Generation Indexing.html">Blockfrost: Maintenance and Next Generation Indexing</a></strong><br>
-<span class="badge badge-abstain">Abstain</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/IO and Ensurable Systems_Cardano Maintenance Initiative.html">IO & Ensurable Systems: Cardano Maintenance Initiative</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/IO and Midgard Labs_L2 Scalability Initiative.html">IO & Midgard Labs: L2 Scalability Initiative</a></strong><br>
-<span class="badge badge-abstain">Abstain</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/IO & VacuumLabs_Enhancing Plutus - Performance, Correctness, and Usability.html">IO & VacuumLabs: Enhancing Plutus - Performance, Correctness, and Usability</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/IO_Cardano High Assurance Technical Collaboration.html">IO: Cardano High Assurance Technical Collaboration</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/Pogun_Capital Without Compromise.html">Pogun: Capital Without Compromise</a></strong><br>
-<span class="badge badge-abstain">Abstain</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/The first node in the browser-a Cardano USP.html">The First Node in the Browser: A Cardano USP</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-23</div>
-<strong><a href="votes/2026/IO_Cardano Upgrades.html">IO: Cardano Upgrades</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-23</div>
-<strong><a href="votes/2026/IO_Consensus Initiative.html">IO: Consensus Initiative (Leios)</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-20</div>
-<strong><a href="votes/2026/IO: Developer Experience Initiative.html">IO: Developer Experience Initiative</a></strong><br>
-<span class="badge badge-abstain">Abstain</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<!-- AUTO-INDEX:END -->
+  /* ── STATS ROW ── */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin: 2rem 0;
+  }
+  .stat-cell {
+    background: var(--card);
+    padding: 1.25rem 1rem;
+    text-align: center;
+    transition: background 0.2s;
+  }
+  .stat-cell:hover { background: var(--bg3); }
+  .stat-num {
+    font-family: var(--mono);
+    font-size: 1.75rem;
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-num.total { color: var(--text-primary); }
+  .stat-num.yes { color: var(--yes); }
+  .stat-num.no { color: var(--no); }
+  .stat-num.abstain { color: var(--abstain); }
+  .stat-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    font-family: var(--mono);
+  }
 
-## Browse by year
-- **2026 votes:** [votes/2026/](votes/2026/)
-- **2025 votes:** [votes/2025/](votes/2025/)
+  /* ── SECTION HEADERS ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 2.5rem 0 1rem;
+  }
+  .section-header h2 {
+    font-size: 11px;
+    font-family: var(--mono);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-secondary);
+    font-weight: 400;
+  }
+  .section-header::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
 
-## How to read a vote page
-Each vote page includes:
-- Governance metadata (action id, type, expiry)
-- The vote cast (Yes / No / Abstain)
-- Full rationale in RCADA’s voice
-- Links to supporting material (when available)
+  /* ── NAV NOTICE ── */
+  .nav-notice {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    background: var(--teal-dim);
+    border: 1px solid rgba(0,220,192,0.2);
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+    font-size: 13px;
+  }
+  .nav-notice .icon {
+    color: var(--teal);
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .nav-notice a {
+    color: var(--teal);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+  .nav-notice a:hover { text-decoration: underline; }
+  .nav-notice-label { color: var(--text-secondary); margin-right: 4px; }
 
-## Notes
-- “Info” actions are often treated as sentiment signals and process tests, not direct authorizations.
-- Treasury withdrawals and protocol changes are assessed against constitutional/guardrail expectations and governance quality.
+  /* ── VOTE CARDS ── */
+  .vote-list { display: flex; flex-direction: column; gap: 10px; }
 
+  .vote-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0 1.25rem;
+    align-items: center;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .vote-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    border-radius: 3px 0 0 3px;
+    transition: opacity 0.2s;
+  }
+  .vote-card.yes-card::before { background: var(--yes); }
+  .vote-card.no-card::before { background: var(--no); }
+  .vote-card.abstain-card::before { background: var(--abstain); }
+
+  .vote-card:hover {
+    border-color: var(--border-hover);
+    background: var(--bg3);
+    transform: translateX(2px);
+  }
+
+  .vote-date {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    white-space: nowrap;
+  }
+
+  .vote-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.4;
+  }
+  .vote-title a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .vote-title a:hover { color: var(--teal); }
+
+  .vote-badges {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  /* ── BADGES ── */
+  .badge {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .badge-yes { background: var(--yes-bg); color: var(--yes); border: 1px solid rgba(0,200,150,0.25); }
+  .badge-no { background: var(--no-bg); color: var(--no); border: 1px solid rgba(240,79,90,0.25); }
+  .badge-abstain { background: var(--abstain-bg); color: var(--abstain); border: 1px solid rgba(245,166,35,0.25); }
+  .badge-type { background: var(--type-bg); color: var(--type); border: 1px solid rgba(59,130,246,0.2); font-weight: 400; }
+
+  /* ── INFO GRID ── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 1.5rem 0;
+  }
+  .info-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+  }
+  .info-card h3 {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+  }
+  .info-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .info-card ul li {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding-left: 14px;
+    position: relative;
+  }
+  .info-card ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-size: 10px;
+    top: 2px;
+  }
+
+  .browse-links {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .browse-link {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--teal);
+    text-decoration: none;
+    padding: 6px 14px;
+    border: 1px solid rgba(0,220,192,0.2);
+    border-radius: 6px;
+    background: var(--teal-dim);
+    transition: all 0.2s;
+  }
+  .browse-link:hover {
+    border-color: var(--teal);
+    background: var(--teal-glow);
+  }
+
+  .coverage-note {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 1.5rem 0;
+    font-family: var(--mono);
+  }
+  .coverage-note strong { color: var(--text-primary); }
+
+  .footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: gap;
+  }
+  .footer-brand {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+  }
+  .footer-chain {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+  .footer-chain span { color: var(--teal); }
+
+  /* fade-in on load */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeUp 0.5s ease forwards;
+  }
+  @keyframes fadeUp {
+    to { opacity:1; transform:translateY(0); }
+  }
+  .vote-card:nth-child(1)  { animation-delay: 0.05s; }
+  .vote-card:nth-child(2)  { animation-delay: 0.10s; }
+  .vote-card:nth-child(3)  { animation-delay: 0.15s; }
+  .vote-card:nth-child(4)  { animation-delay: 0.20s; }
+  .vote-card:nth-child(5)  { animation-delay: 0.25s; }
+  .vote-card:nth-child(6)  { animation-delay: 0.30s; }
+  .vote-card:nth-child(7)  { animation-delay: 0.35s; }
+  .vote-card:nth-child(8)  { animation-delay: 0.40s; }
+  .vote-card:nth-child(9)  { animation-delay: 0.45s; }
+  .vote-card:nth-child(10) { animation-delay: 0.50s; }
+
+  @media (max-width: 600px) {
+    .stats-row { grid-template-columns: repeat(2,1fr); }
+    .info-grid { grid-template-columns: 1fr; }
+    .vote-card { grid-template-columns: 1fr; gap: 8px; }
+    .vote-date { font-size: 10px; }
+    .vote-badges { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- TOPBAR -->
+  <nav class="topbar">
+    <div class="topbar-brand">
+      <span class="dot"></span>
+      RCADA · DRep
+    </div>
+    <a class="topbar-link" href="RCADA_GOVERNANCE_POLICY.html">Governance Policy →</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <p class="hero-eyebrow">On-chain governance · Cardano</p>
+    <h1>RCADA <span>DRep</span><br>Voting Record</h1>
+    <p>RCADA represents delegators through a Constitution-first, transparent, and sustainability-focused approach to governance.</p>
+    <p>This is the public record of RCADA's governance activity since late 2025, including full vote rationales and structured analysis for each on-chain decision.</p>
+  </header>
+
+  <!-- STATS -->
+  <div class="stats-row">
+    <div class="stat-cell">
+      <span class="stat-num total">25</span>
+      <span class="stat-label">Total Votes</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num yes">12</span>
+      <span class="stat-label">Yes</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num no">2</span>
+      <span class="stat-label">No</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num abstain">11</span>
+      <span class="stat-label">Abstain</span>
+    </div>
+  </div>
+
+  <!-- NAV NOTICE -->
+  <div class="nav-notice">
+    <span class="icon">⬡</span>
+    <span><span class="nav-notice-label">Start here:</span>
+    <a href="RCADA_GOVERNANCE_POLICY.html">RCADA DRep Governance Policy</a></span>
+  </div>
+
+  <!-- LATEST VOTES -->
+  <div class="section-header">
+    <h2>Latest Votes</h2>
+  </div>
+
+  <div class="vote-list">
+    <a class="vote-card abstain-card fade-in" href="votes/2026/Blockfrost_Maintenance and Next Generation Indexing.html">
+      <span class="vote-date">2026-05-24</span>
+      <span class="vote-title">Blockfrost: Maintenance and Next Generation Indexing</span>
+      <div class="vote-badges">
+        <span class="badge badge-abstain">Abstain</span>
+        <span class="badge badge-type">Treasury</span>
+      </div>
+    </a>
+    <a class="vote-card yes-card fade-in" href="votes/2026/IO and Ensurable Systems_Cardano Maintenance Initiative.html">
+      <span class="vote-date">2026-05-24</span>
+      <span class="vote-title">IO &amp; Ensurable Systems: Cardano Maintenance Initiative</span>
+      <div class="vote-badges">
+        <span class="badge badge-yes">Yes</span>
+        <span class="badge badge-type">Treasury</span>
+      </div>
+    </a>
+    <a class="vote-card abstain-card fade-in" href="votes/2026/IO and Midgard Labs_L2 Scalability Initiative.html">
+      <span class="vote-date">2026-05-24</span>
+      <span class="vote-title">IO &amp; Midgard Labs: L2 Scalability Initiative</span>
+      <div class="vote-badges">
+        <span class="badge badge-abstain">Abstain</span>
+        <span class="badge badge-type">Treasury</span>
+      </div>
+    </a>
+    <a class="vote-card yes-card fade-in" href="votes/2026/IO & VacuumLabs_Enhancing Plutus - Performance, Correctness, and Usability.html">
+      <span class="vote-date">2026-05-24</span>
+      <span class="vote-title">IO &amp; VacuumLabs: Enhancing Plutus — Performance, Correctness, and Usability</span>
+      <div class="vote-badges">
+        <span class="badge badge-yes">Yes</span>
+        <span class="badge badge-type">Treasury</span>
+      </div>
+    </a>
+    <a class="vote-card yes-card fade-in" href="votes/2026/IO_Cardano High Assurance Technical Collaboration.html">
+      <span class="vote-date">2026-05-24</span>
+      <span class="vote-title">IO: Cardano High Assurance Technical Collaboration</span>
+      <div class="vote-badges">
+        <span class="badge badge-yes">Yes</span>
+        <span class="badge badge-type">Treasury</span>
+      </div>
+    </a>
+    <a class="vote-card abstain-card fade-in" href="votes/2026/Pogun_Capital Without Compromise.html">
+      <span class="vote-date">2026-05-24</span>
+      <span class="vote-title">Pogun: Capital Without Compromise</span>
+      <div class="vote-badges">
+        <span class="badge badge-abstain">Abstain</span>
+        <span class="badge badge-type">Treasury</span>
+      </div>
+    </a>
+    <a class="vote-card yes-card fade-in" href="votes/2026/The first node in the browser-a Cardano USP.html">
+      <span class="vote-date">2026-05-24</span>
+      <span class="vote-title">The First Node in the Browser: A Cardano USP</span>
+      <div class="vote-badges">
+        <span class="badge badge-yes">Yes</span>
+        <span class="badge badge-type">Treasury</span>
+      </div>
+    </a>
+    <a class="vote-card yes-card fade-in" href="votes/2026/IO_Cardano Upgrades.html">
+      <span class="vote-date">2026-05-23</span>
+      <span class="vote-title">IO: Cardano Upgrades</span>
+      <div class="vote-badges">
+        <span class="badge badge-yes">Yes</span>
+        <span class="badge badge-type">Treasury</span>
+      </div>
+    </a>
+    <a class="vote-card yes-card fade-in" href="votes/2026/IO_Consensus Initiative.html">
+      <span class="vote-date">2026-05-23</span>
+      <span class="vote-title">IO: Consensus Initiative (Leios)</span>
+      <div class="vote-badges">
+        <span class="badge badge-yes">Yes</span>
+        <span class="badge badge-type">Treasury</span>
+      </div>
+    </a>
+    <a class="vote-card abstain-card fade-in" href="votes/2026/IO: Developer Experience Initiative.html">
+      <span class="vote-date">2026-05-20</span>
+      <span class="vote-title">IO: Developer Experience Initiative</span>
+      <div class="vote-badges">
+        <span class="badge badge-abstain">Abstain</span>
+        <span class="badge badge-type">Treasury</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- INFO SECTION -->
+  <div class="section-header" style="margin-top:2.5rem;">
+    <h2>Archive &amp; Reference</h2>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <h3>How to read a vote</h3>
+      <ul>
+        <li>Governance metadata (action ID, type, expiry)</li>
+        <li>The vote cast (Yes / No / Abstain)</li>
+        <li>Full rationale in RCADA's voice</li>
+        <li>Links to supporting material when available</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3>Browse by year</h3>
+      <div class="browse-links" style="margin-bottom:1rem;">
+        <a class="browse-link" href="votes/2026/">2026 votes →</a>
+        <a class="browse-link" href="votes/2025/">2025 votes →</a>
+      </div>
+      <p style="font-size:12px; color:var(--text-dim); font-family:var(--mono);">
+        "Info" actions = sentiment signals. Treasury &amp; protocol changes assessed against constitutional guardrails.
+      </p>
+    </div>
+  </div>
+
+  <div class="coverage-note">
+    <strong>Historical coverage:</strong> This archive reflects RCADA's structured governance methodology introduced in late 2025. Earlier votes were conducted prior to this framework and are not included.
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span class="footer-brand">RCADA · DRep Governance</span>
+    <span class="footer-chain">Powered by <span>Cardano</span></span>
+  </footer>
+
+</div>
+</body>
+</html>
