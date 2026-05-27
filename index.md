@@ -196,9 +196,6 @@ layout: null
     margin: 2rem 0;
   }
   /* hide the raw markdown text the auto-script dumps between the markers */
-  #stats-raw {
-    display: none;
-  }
   .stat-cell {
     background: var(--card);
     padding: 1.25rem 1rem;
@@ -482,7 +479,7 @@ layout: null
     <nav class="topbar">
       <div class="topbar-left">
         <img class="topbar-logo"
-             src="assets/RCADA DREP LOGO_bkgcurve.png"
+             src="assets/RCADA DREP LOGO.png"
              alt="RCADA DRep Logo">
         <div class="topbar-live">
           <span class="dot"></span>
@@ -504,37 +501,26 @@ layout: null
     <p>This is the public record of RCADA's governance activity since late 2025, including full vote rationales and structured analysis for each on-chain decision.</p>
   </header>
 
-  <!-- STATS DISPLAY (always visible, populated by JS from raw data below) -->
-  <div class="stats-row">
-    <div class="stat-cell">
-      <span class="stat-num total" id="stat-total">25</span>
-      <span class="stat-label">Total Votes</span>
-    </div>
-    <div class="stat-cell">
-      <span class="stat-num yes" id="stat-yes">12</span>
-      <span class="stat-label">Yes</span>
-    </div>
-    <div class="stat-cell">
-      <span class="stat-num no" id="stat-no">2</span>
-      <span class="stat-label">No</span>
-    </div>
-    <div class="stat-cell">
-      <span class="stat-num abstain" id="stat-abstain">11</span>
-      <span class="stat-label">Abstain</span>
-    </div>
-  </div>
-
-  <!--
-    AUTO-STATS:START
-    The auto-update script writes markdown stats between these markers.
-    The hidden div below captures that text; JS reads & parses it to update the display above.
-  -->
-  <div id="stats-raw">
 <!-- AUTO-STATS:START -->
-**Committed votes:** 25  
-**Yes:** 12 · **No:** 2 · **Abstain:** 11
-<!-- AUTO-STATS:END -->
+<div class="stats-row">
+  <div class="stat-cell">
+    <span class="stat-num total">25</span>
+    <span class="stat-label">Total Votes</span>
   </div>
+  <div class="stat-cell">
+    <span class="stat-num yes">12</span>
+    <span class="stat-label">Yes</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-num no">2</span>
+    <span class="stat-label">No</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-num abstain">11</span>
+    <span class="stat-label">Abstain</span>
+  </div>
+</div>
+<!-- AUTO-STATS:END -->
 
   <!-- NAV NOTICE -->
   <div class="nav-notice">
@@ -551,65 +537,67 @@ layout: null
   </div>
 
 <!-- AUTO-INDEX:START -->
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/Blockfrost_Maintenance and Next Generation Indexing.html">Blockfrost: Maintenance and Next Generation Indexing</a></strong><br>
-<span class="badge badge-abstain">Abstain</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/IO and Ensurable Systems_Cardano Maintenance Initiative.html">IO & Ensurable Systems: Cardano Maintenance Initiative</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/IO and Midgard Labs_L2 Scalability Initiative.html">IO & Midgard Labs: L2 Scalability Initiative</a></strong><br>
-<span class="badge badge-abstain">Abstain</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/IO & VacuumLabs_Enhancing Plutus - Performance, Correctness, and Usability.html">IO & VacuumLabs: Enhancing Plutus - Performance, Correctness, and Usability</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/IO_Cardano High Assurance Technical Collaboration.html">IO: Cardano High Assurance Technical Collaboration</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/Pogun_Capital Without Compromise.html">Pogun: Capital Without Compromise</a></strong><br>
-<span class="badge badge-abstain">Abstain</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-24</div>
-<strong><a href="votes/2026/The first node in the browser-a Cardano USP.html">The First Node in the Browser: A Cardano USP</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-23</div>
-<strong><a href="votes/2026/IO_Cardano Upgrades.html">IO: Cardano Upgrades</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-23</div>
-<strong><a href="votes/2026/IO_Consensus Initiative.html">IO: Consensus Initiative (Leios)</a></strong><br>
-<span class="badge badge-yes">Yes</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
-</div>
-<div class="vote-card">
-<div class="vote-date">2026-05-20</div>
-<strong><a href="votes/2026/IO: Developer Experience Initiative.html">IO: Developer Experience Initiative</a></strong><br>
-<span class="badge badge-abstain">Abstain</span>
-<span class="badge badge-type">Treasury Withdrawals</span>
+<div class="vote-list">
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-24</div>
+    <strong><a href="votes/2026/Blockfrost_Maintenance and Next Generation Indexing.html">Blockfrost: Maintenance and Next Generation Indexing</a></strong>
+    <span class="badge badge-abstain">Abstain</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-24</div>
+    <strong><a href="votes/2026/IO and Ensurable Systems_Cardano Maintenance Initiative.html">IO &amp; Ensurable Systems: Cardano Maintenance Initiative</a></strong>
+    <span class="badge badge-yes">Yes</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-24</div>
+    <strong><a href="votes/2026/IO and Midgard Labs_L2 Scalability Initiative.html">IO &amp; Midgard Labs: L2 Scalability Initiative</a></strong>
+    <span class="badge badge-abstain">Abstain</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-24</div>
+    <strong><a href="votes/2026/IO & VacuumLabs_Enhancing Plutus - Performance, Correctness, and Usability.html">IO &amp; VacuumLabs: Enhancing Plutus — Performance, Correctness, and Usability</a></strong>
+    <span class="badge badge-yes">Yes</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-24</div>
+    <strong><a href="votes/2026/IO_Cardano High Assurance Technical Collaboration.html">IO: Cardano High Assurance Technical Collaboration</a></strong>
+    <span class="badge badge-yes">Yes</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-24</div>
+    <strong><a href="votes/2026/Pogun_Capital Without Compromise.html">Pogun: Capital Without Compromise</a></strong>
+    <span class="badge badge-abstain">Abstain</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-24</div>
+    <strong><a href="votes/2026/The first node in the browser-a Cardano USP.html">The First Node in the Browser: A Cardano USP</a></strong>
+    <span class="badge badge-yes">Yes</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-23</div>
+    <strong><a href="votes/2026/IO_Cardano Upgrades.html">IO: Cardano Upgrades</a></strong>
+    <span class="badge badge-yes">Yes</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-23</div>
+    <strong><a href="votes/2026/IO_Consensus Initiative.html">IO: Consensus Initiative (Leios)</a></strong>
+    <span class="badge badge-yes">Yes</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
+  <div class="vote-card fade-in">
+    <div class="vote-date">2026-05-20</div>
+    <strong><a href="votes/2026/IO: Developer Experience Initiative.html">IO: Developer Experience Initiative</a></strong>
+    <span class="badge badge-abstain">Abstain</span>
+    <span class="badge badge-type">Treasury Withdrawals</span>
+  </div>
 </div>
 <!-- AUTO-INDEX:END -->
 
@@ -651,30 +639,5 @@ layout: null
 
 </div><!-- /page-wrap -->
 
-<script>
-// Parse markdown stats written by auto-update script and populate the stats display.
-// The script writes e.g. "**Committed votes:** 25  \n**Yes:** 12 · **No:** 2 · **Abstain:** 11"
-// between the AUTO-STATS comment markers inside #stats-raw.
-(function() {
-  var raw = document.getElementById('stats-raw');
-  if (!raw) return;
-  var text = raw.textContent || '';
-
-  function extract(pattern) {
-    var m = text.match(pattern);
-    return m ? m[1] : null;
-  }
-
-  var total   = extract(/Committed\s+votes[^0-9]*(\d+)/i);
-  var yes     = extract(/Yes[^0-9]*(\d+)/i);
-  var no      = extract(/\bNo[^0-9]*(\d+)/i);
-  var abstain = extract(/Abstain[^0-9]*(\d+)/i);
-
-  if (total)   document.getElementById('stat-total').textContent   = total;
-  if (yes)     document.getElementById('stat-yes').textContent     = yes;
-  if (no)      document.getElementById('stat-no').textContent      = no;
-  if (abstain) document.getElementById('stat-abstain').textContent = abstain;
-})();
-</script>
 </body>
 </html>
