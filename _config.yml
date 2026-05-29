@@ -1,3 +1,6 @@
+title: RCADA DRep Voting Record
 baseurl: "/rcada-drep-votes"
 url: "https://brolloks.github.io"
 markdown: kramdown
+kramdown:
+  input: GFM
