@@ -119,11 +119,11 @@ RCADA believes the revised proposal clears the threshold for cautious support be
 | Dimension | Score (1–5) |
 |---|---:|
 | Constitutional clarity | 4 |
-| Governance quality | 4 |
+| Governance quality | 3 |
 | Execution credibility | 4 |
 | Ecosystem value | 4 |
 | Risk balance | 3 |
-| **Overall score** | **🟢 76% — Cautious support with ROI expectations** |
+| **Overall score** | **🟡 72% — Very cautious support with ROI expectations** |
 
 ---
 
