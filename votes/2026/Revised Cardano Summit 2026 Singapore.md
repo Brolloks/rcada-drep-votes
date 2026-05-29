@@ -5,7 +5,7 @@ type: "Treasury Withdrawals"
 vote: "Yes"
 vote_date: "2026-05-29"
 expires: "2026-05-29"
-status: "Draft"
+status: "Committed"
 constitution_version: "Cardano Blockchain Ecosystem Constitution v2.4"
 tags: ["treasury", "summit", "events", "adoption", "enterprise", "singapore"]
 links:
