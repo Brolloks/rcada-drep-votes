@@ -781,7 +781,7 @@ body::after {
 }
 
 /* ── Tick / Warning colours (classes added by inline script) ── */
-.prose ul li.item-pass { color: var(--yes); }
 .prose ul li.item-pass::before { color: var(--yes); }
-.prose ul li.item-warn { color: var(--abstain); }
 .prose ul li.item-warn::before { color: var(--abstain); }
+.prose ul li.item-pass .item-icon { color: var(--yes); }
+.prose ul li.item-warn .item-icon { color: var(--abstain); }
