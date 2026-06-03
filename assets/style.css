@@ -779,3 +779,9 @@ body::after {
   color: var(--text-dim);
   border: 1px solid rgba(110,130,149,0.2);
 }
+
+/* ── Tick / Warning colours (classes added by inline script) ── */
+.prose ul li.item-pass { color: var(--yes); }
+.prose ul li.item-pass::before { color: var(--yes); }
+.prose ul li.item-warn { color: var(--abstain); }
+.prose ul li.item-warn::before { color: var(--abstain); }
