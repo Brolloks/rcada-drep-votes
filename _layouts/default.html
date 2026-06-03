@@ -159,14 +159,27 @@
 
 </div>
 <script>
-// Colour ✓/✔ list items green and ⚠/△ items amber in prose sections
+// Colour only the ✓/✔ or ⚠/△ character, leaving the rest of the text grey
 document.querySelectorAll('.prose ul li').forEach(function(li) {
-  var t = li.textContent.trim();
-  if (t.charAt(0) === '\u2713' || t.charAt(0) === '\u2714') {
-    li.classList.add('item-pass');
-  } else if (t.charAt(0) === '\u26a0' || t.charAt(0) === '\u25b3') {
-    li.classList.add('item-warn');
-  }
+  var first = li.childNodes[0];
+  if (!first || first.nodeType !== Node.TEXT_NODE) return;
+  var t = first.textContent.trim();
+  var ch = t.charAt(0);
+  var isPass = (ch === '\u2713' || ch === '\u2714');
+  var isWarn = (ch === '\u26a0' || ch === '\u25b3');
+  if (!isPass && !isWarn) return;
+
+  // Split the text node: [icon][rest]
+  var icon = document.createElement('span');
+  icon.className = 'item-icon';
+  icon.textContent = ch;
+
+  var rest = document.createTextNode(first.textContent.slice(first.textContent.indexOf(ch) + 1));
+  li.replaceChild(rest, first);
+  li.insertBefore(icon, rest);
+
+  if (isPass) li.classList.add('item-pass');
+  if (isWarn) li.classList.add('item-warn');
 });
 </script>
 </body>
