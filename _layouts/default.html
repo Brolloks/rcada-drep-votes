@@ -158,5 +158,16 @@
   {% endif %}
 
 </div>
+<script>
+// Colour ✓/✔ list items green and ⚠/△ items amber in prose sections
+document.querySelectorAll('.prose ul li').forEach(function(li) {
+  var t = li.textContent.trim();
+  if (t.charAt(0) === '\u2713' || t.charAt(0) === '\u2714') {
+    li.classList.add('item-pass');
+  } else if (t.charAt(0) === '\u26a0' || t.charAt(0) === '\u25b3') {
+    li.classList.add('item-warn');
+  }
+});
+</script>
 </body>
 </html>
