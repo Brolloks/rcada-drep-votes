@@ -5,7 +5,7 @@ type: "Treasury Withdrawals"
 vote: "Yes"
 vote_date: "2026-06-04"
 expires: "2026-06-08"
-status: "Draft"
+status: "Committed"
 constitution_version: "Cardano Blockchain Ecosystem Constitution v2.4"
 tags: ["treasury", "research", "post-quantum", "scalability", "human-centred-design", "io-research"]
 links:
