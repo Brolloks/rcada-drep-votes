@@ -130,12 +130,12 @@ Potential benefits:
 
 Risks and concerns:
 
-- Adoption is not guaranteed.
-- Treasury-value capture depends on real usage and application design.
-- Hydra is not the right scaling model for every use case.
-- Continued IO funding may increase perceived delivery concentration.
-- Detailed legal and milestone terms need strong public transparency.
-- Ecosystem impact should be measured through adoption, reliability, usage, and settlement metrics, not only protocol development outputs.
+- ⚠ Adoption is not guaranteed.
+- ⚠ Treasury-value capture depends on real usage and application design.
+- ⚠ Hydra is not the right scaling model for every use case.
+- ⚠ Continued IO funding may increase perceived delivery concentration.
+- ⚠ Detailed legal and milestone terms need strong public transparency.
+- ⚠ Ecosystem impact should be measured through adoption, reliability, usage, and settlement metrics, not only protocol development outputs.
 
 **Assessment:** High strategic relevance / manageable risk with strong oversight
 
