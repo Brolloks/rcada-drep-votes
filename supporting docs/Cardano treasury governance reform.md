@@ -1,11 +1,10 @@
 ---
 layout: default
-title: "Reforming Cardano Treasury Governance: A Research Article"
+title: "Reforming Cardano Treasury Governance"
 doc_type: "Research Article"
 date: "2026-06-11"
 tags: ["treasury-governance", "budget-process", "strategic-planning"]
 ---
-# Reforming Cardano Treasury Governance: A Research Article
 
 *Published June 2026 by RCADA DRep*
 
