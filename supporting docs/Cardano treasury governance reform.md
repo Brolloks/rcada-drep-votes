@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Cardano Treasury Governance Reform — Supporting Analysis"
+doc_type: "Supporting Analysis"
+date: "2026-06-11"
+tags: ["treasury-governance", "budget-process", "strategic-planning"]
+---
 # Reforming Cardano Treasury Governance: A Comparative Analysis and Reform Roadmap
 
 *Prepared June 2026 — Revision 2, updated against the verified primary source*
