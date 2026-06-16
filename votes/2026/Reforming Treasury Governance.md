@@ -198,3 +198,6 @@ These safeguards are RCADA’s own view of what would be needed for responsible 
 RCADA appreciates AtlasHub putting forward a structured starting point. The proposal does more than name the problem; it offers a possible sequence and budget framework that deserves further exploration. We would welcome deeper work on thematic budgeting, anti-bundling principles, project evaluation support, expert review design, and how a future Treasury process can remain both strategic and decentralised.
 
 For these reasons, RCADA votes **ABSTAIN**. We support the need for Treasury governance reform and welcome further development of this proposal, but we are not ready to endorse the outlined model until the roles, safeguards, authority boundaries, and accountability mechanisms are more clearly defined.
+
+RCADA has also prepared a companion deep-dive analysis to explore these trade-offs in more detail:  
+[Reforming Cardano Treasury Governance: A Comparative Analysis and Reform Roadmap](https://brolloks.github.io/rcada-drep-votes/supporting%20docs/Cardano%20treasury%20governance%20reform.html)
