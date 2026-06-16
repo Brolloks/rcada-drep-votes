@@ -10,7 +10,7 @@ constitution_version: "Cardano Blockchain Ecosystem Constitution v2.4"
 tags: ["info-action", "treasury-governance", "budget-process", "ncl", "strategic-planning", "expert-review", "governance-reform"]
 links:
   adastat: "https://adastat.net/governances/5d3a1f657fe330b51b459ca9b482fc1a3b6e3336227f880d8a058771c23e3ce200"
-  companion_analysis: "LINK-TO-BE-ADDED"
+  companion_analysis: "https://raw.githubusercontent.com/Brolloks/rcada-drep-votes/refs/heads/main/supporting%20docs/Cardano%20treasury%20governance%20reform.md"
   govtool: ""
   forum: ""
   ipfs: ""
