@@ -34,7 +34,7 @@
 
     {{ content }}
 
-  {% else %}
+  {% elsif page.vote %}
 
   <article class="vote-page">
 
@@ -119,6 +119,7 @@
         {% if page.links.govtool and page.links.govtool != "" %}{% assign has_link = true %}{% endif %}
         {% if page.links.forum and page.links.forum != "" %}{% assign has_link = true %}{% endif %}
         {% if page.links.ipfs and page.links.ipfs != "" %}{% assign has_link = true %}{% endif %}
+        {% if page.links.companion_analysis and page.links.companion_analysis != "" %}{% assign has_link = true %}{% endif %}
         {% if has_link %}
         <div class="sidebar-card">
           <div class="sidebar-card-title">External links</div>
@@ -134,6 +135,9 @@
             {% endif %}
             {% if page.links.ipfs and page.links.ipfs != "" %}
               <a href="{{ page.links.ipfs }}" target="_blank" rel="noopener" class="sidebar-ext-link">IPFS ↗</a>
+            {% endif %}
+            {% if page.links.companion_analysis and page.links.companion_analysis != "" %}
+              <a href="{{ site.baseurl }}{{ page.links.companion_analysis }}" class="sidebar-ext-link">Companion Analysis →</a>
             {% endif %}
           </div>
         </div>
@@ -152,6 +156,32 @@
       {% endif %}
 
     </aside>
+
+  </article>
+
+  {% else %}
+
+  <article class="doc-page">
+
+    <a class="sidebar-back" href="{{ site.baseurl }}/">← All votes</a>
+
+    <header class="doc-page-header">
+      {% if page.doc_type %}<span class="badge badge-type">{{ page.doc_type }}</span>{% endif %}
+      {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+      {% if page.date %}<p class="vote-page-date">{{ page.date | date: "%Y-%m-%d" }}</p>{% endif %}
+    </header>
+
+    <div class="prose doc-prose">
+      {{ content }}
+    </div>
+
+    {% if page.tags %}
+    <div class="doc-tags">
+      {% for tag in page.tags %}
+        <span class="sidebar-tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
 
   </article>
 
