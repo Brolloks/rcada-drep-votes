@@ -161,3 +161,51 @@ html = replaceBlock(html, INDEX_START, INDEX_END, indexBlock);
 fs.writeFileSync(indexPath, html, "utf8");
 
 console.log("index.html updated — " + totalVotes + " votes (Y:" + countYes + " N:" + countNo + " A:" + countAbstain + "), showing " + latest.length + " latest");
+
+// ── Generate year index pages ─────────────────────────────────────────────────
+// Group all rows by year
+var byYear = {};
+for (var i = 0; i < rows.length; i++) {
+  var r = rows[i];
+  var year = r.date.slice(0, 4);
+  if (!byYear[year]) byYear[year] = [];
+  byYear[year].push(r);
+}
+
+var years = Object.keys(byYear).sort(function(a, b) { return b - a; });
+
+for (var yi = 0; yi < years.length; yi++) {
+  var year = years[yi];
+  var yearRows = byYear[year];
+  var yearDir = path.join("votes", year);
+
+  // Build markdown table rows
+  var tableRows = yearRows.map(function(r) {
+    // link is e.g. "votes/2026/Foo.html" — make it relative to the year dir
+    var filename = path.basename(r.link);
+    var voteLabel = r.vote || "";
+    var typeLabel = r.type || "";
+    return "| " + r.date + " | [" + r.title.replace(/\|/g, "\\|") + "](" + filename + ") | " + voteLabel + " | " + typeLabel + " |";
+  }).join("\n");
+
+  var yearCountYes     = yearRows.filter(function(r) { return r.vote.toLowerCase() === "yes"; }).length;
+  var yearCountNo      = yearRows.filter(function(r) { return r.vote.toLowerCase() === "no"; }).length;
+  var yearCountAbstain = yearRows.filter(function(r) { return r.vote.toLowerCase() === "abstain"; }).length;
+
+  var yearPage = "---\n";
+  yearPage += "layout: default\n";
+  yearPage += "title: \"RCADA Votes \u2014 " + year + "\"\n";
+  yearPage += "---\n\n";
+  yearPage += "## RCADA Votes \u2014 " + year + "\n\n";
+  yearPage += "**" + yearRows.length + " committed votes** \u00b7 ";
+  yearPage += "Yes: " + yearCountYes + " \u00b7 ";
+  yearPage += "No: " + yearCountNo + " \u00b7 ";
+  yearPage += "Abstain: " + yearCountAbstain + "\n\n";
+  yearPage += "| Date | Proposal | Vote | Type |\n";
+  yearPage += "|---|---|---|---|\n";
+  yearPage += tableRows + "\n";
+
+  var yearIndexPath = path.join(yearDir, "index.md");
+  fs.writeFileSync(yearIndexPath, yearPage, "utf8");
+  console.log("votes/" + year + "/index.md updated — " + yearRows.length + " votes");
+}
