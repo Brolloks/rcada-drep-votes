@@ -14,7 +14,7 @@ adastat: "https://adastat.net/governances/fbb8d1a4a8d6b62f8cd706944a0582b884c2b9
 govtool: ""
 forum: ""
 ipfs: ""
---------
+---
 
 ## Summary
 
