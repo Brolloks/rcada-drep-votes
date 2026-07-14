@@ -5,10 +5,11 @@ title: "RCADA Votes — 2026"
 
 ## RCADA Votes — 2026
 
-**44 committed votes** · Yes: 24 · No: 2 · Abstain: 18
+**45 committed votes** · Yes: 24 · No: 2 · Abstain: 19
 
 | Date | Proposal | Vote | Type |
 |---|---|---|---|
+| 2026-07-14 | [Strike Finance Liquidity Deployment](Strike Finance Liquidity Deployment.html) | Abstain | Treasury Withdrawals |
 | 2026-07-08 | [Eternl: Path to Sustainability - v2](Eternl_Path to Sustainability - v2.html) | Yes | Treasury Withdrawals |
 | 2026-06-23 | [van Rossem Hard Fork — Protocol Version 11.0](Hard Fork to Protocol Version 11 -van Rossem- Hard Fork.html) | Yes | Hard Fork Initiation |
 | 2026-06-11 | [IO: Hydra](IO_Hydra.html) | Yes | Treasury Withdrawals |
