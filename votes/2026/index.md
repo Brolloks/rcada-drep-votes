@@ -5,10 +5,11 @@ title: "RCADA Votes — 2026"
 
 ## RCADA Votes — 2026
 
-**49 committed votes** · Yes: 27 · No: 2 · Abstain: 20
+**50 committed votes** · Yes: 28 · No: 2 · Abstain: 20
 
 | Date | Proposal | Vote | Type |
 |---|---|---|---|
+| 2026-07-18 | [Withdraw 1,193,000 ada for Intersect Technical Steering Committee Support](Withdraw 1,193,000 ada for Intersect Technical Steering Committee Support.html) | Yes | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 1,310,960 ada for Hardware Wallet Maintenance 2026](Withdraw 1,310,960 ada for Hardware Wallet Maintenance 2026.html) | Yes | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 3,961,538 ada for Bringing Real-World Payments to Cardano with Wirex](Withdraw 3,961,538 ada for Bringing Real-World Payments to Cardano with Wirex.html) | Abstain | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 540,750 ada for UTxO RPC by TxPipe: Maintaining Cardano’s Integration Standard, Year 2](Withdraw 540,750 ada for UTxO RPC by TxPipe.html) | Yes | Treasury Withdrawals |
