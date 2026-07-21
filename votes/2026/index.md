@@ -5,11 +5,12 @@ title: "RCADA Votes — 2026"
 
 ## RCADA Votes — 2026
 
-**54 committed votes** · Yes: 31 · No: 2 · Abstain: 21
+**55 committed votes** · Yes: 32 · No: 2 · Abstain: 21
 
 | Date | Proposal | Vote | Type |
 |---|---|---|---|
 | 2026-07-18 | [Alchemy by Sundial x Charms: Cardano-Native Bitcoin Treasury Protocol](Alchemy by Sundial x Charms_Cardano-Native Bitcoin Treasury Protocol.html) | Abstain | Treasury Withdrawals |
+| 2026-07-18 | [Cardano Builder DAO](Cardano Builder DAO.html) | Yes | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 1,162,746 ada for MLabs Core Tool Maintenance & Enhancement: Plutarch and Ply](Withdraw 1,162,746 ada for MLabs Core Tool Maintenance and Enhancement-Plutarc.html) | Yes | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 1,193,000 ada for Intersect Technical Steering Committee Support](Withdraw 1,193,000 ada for Intersect Technical Steering Committee Support.html) | Yes | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 1,310,960 ada for Hardware Wallet Maintenance 2026](Withdraw 1,310,960 ada for Hardware Wallet Maintenance 2026.html) | Yes | Treasury Withdrawals |
