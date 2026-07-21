@@ -5,10 +5,11 @@ title: "RCADA Votes — 2026"
 
 ## RCADA Votes — 2026
 
-**52 committed votes** · Yes: 30 · No: 2 · Abstain: 20
+**53 committed votes** · Yes: 31 · No: 2 · Abstain: 20
 
 | Date | Proposal | Vote | Type |
 |---|---|---|---|
+| 2026-07-18 | [Withdraw 1,162,746 ada for MLabs Core Tool Maintenance & Enhancement: Plutarch and Ply](Withdraw 1,162,746 ada for MLabs Core Tool Maintenance & Enhancement: Plutarc.html) | Yes | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 1,193,000 ada for Intersect Technical Steering Committee Support](Withdraw 1,193,000 ada for Intersect Technical Steering Committee Support.html) | Yes | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 1,310,960 ada for Hardware Wallet Maintenance 2026](Withdraw 1,310,960 ada for Hardware Wallet Maintenance 2026.html) | Yes | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 25,400,000 ada for Intersect: Governance coordination and technical stewardship](Withdraw 25,400,000 ada for Intersect: Governance coordination and technical.html) | Yes | Treasury Withdrawals |
