@@ -13,7 +13,7 @@ title: "RCADA Votes — 2026"
 | 2026-07-18 | [Withdraw 1,162,746 ada for MLabs Core Tool Maintenance & Enhancement: Plutarch and Ply](Withdraw 1,162,746 ada for MLabs Core Tool Maintenance and Enhancement-Plutarc.html) | Yes | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 1,193,000 ada for Intersect Technical Steering Committee Support](Withdraw 1,193,000 ada for Intersect Technical Steering Committee Support.html) | Yes | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 1,310,960 ada for Hardware Wallet Maintenance 2026](Withdraw 1,310,960 ada for Hardware Wallet Maintenance 2026.html) | Yes | Treasury Withdrawals |
-| 2026-07-18 | [Withdraw 25,400,000 ada for Intersect: Governance coordination and technical stewardship](Withdraw 25,400,000 ada for Intersect: Governance coordination and technical.html) | Yes | Treasury Withdrawals |
+| 2026-07-18 | [Withdraw 25,400,000 ada for Intersect: Governance coordination and technical stewardship](Withdraw 25,400,000 ada for Intersect_Governance coordination and technical.html) | Yes | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 3,810,423 ada for Mithril Protocol](Withdraw 3,810,423 ada for Mithril Protocol.html) | Yes | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 3,961,538 ada for Bringing Real-World Payments to Cardano with Wirex](Withdraw 3,961,538 ada for Bringing Real-World Payments to Cardano with Wirex.html) | Abstain | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 540,750 ada for UTxO RPC by TxPipe: Maintaining Cardano’s Integration Standard, Year 2](Withdraw 540,750 ada for UTxO RPC by TxPipe.html) | Yes | Treasury Withdrawals |
