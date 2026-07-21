@@ -5,7 +5,7 @@ title: "RCADA Votes — 2026"
 
 ## RCADA Votes — 2026
 
-**55 committed votes** · Yes: 32 · No: 2 · Abstain: 21
+**56 committed votes** · Yes: 32 · No: 2 · Abstain: 22
 
 | Date | Proposal | Vote | Type |
 |---|---|---|---|
@@ -17,6 +17,7 @@ title: "RCADA Votes — 2026"
 | 2026-07-18 | [Withdraw 25,400,000 ada for Intersect: Governance coordination and technical stewardship](Withdraw 25,400,000 ada for Intersect_Governance coordination and technical.html) | Yes | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 3,810,423 ada for Mithril Protocol](Withdraw 3,810,423 ada for Mithril Protocol.html) | Yes | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 3,961,538 ada for Bringing Real-World Payments to Cardano with Wirex](Withdraw 3,961,538 ada for Bringing Real-World Payments to Cardano with Wirex.html) | Abstain | Treasury Withdrawals |
+| 2026-07-18 | [Withdraw 4,969,231 ada for Cardano Enterprise Adoption: Ticketing Platform](Withdraw 4,969,231 ada for Cardano Enterprise Adoption_Ticketing Platform.html) | Abstain | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 540,750 ada for UTxO RPC by TxPipe: Maintaining Cardano’s Integration Standard, Year 2](Withdraw 540,750 ada for UTxO RPC by TxPipe.html) | Yes | Treasury Withdrawals |
 | 2026-07-18 | [Withdraw 540,750 ada for TxPipe Dolos: Maintaining Cardano's Lightweight Data Node, Year 2](Withdraw 540,750 ada for by TxPipe Dolos.html) | Yes | Treasury Withdrawals |
 | 2026-07-14 | [Strike Finance Liquidity Deployment](Strike Finance Liquidity Deployment.html) | Abstain | Treasury Withdrawals |
