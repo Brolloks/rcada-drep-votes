@@ -5,10 +5,11 @@ title: "RCADA Votes — 2026"
 
 ## RCADA Votes — 2026
 
-**60 committed votes** · Yes: 35 · No: 2 · Abstain: 23
+**61 committed votes** · Yes: 36 · No: 2 · Abstain: 23
 
 | Date | Proposal | Vote | Type |
 |---|---|---|---|
+| 2026-08-01 | [Net Change Limit: Cardano Treasury (Epochs 613-713)](Net Change Limit: Cardano Treasury (Epochs 613-713).html) | Yes | Info Action |
 | 2026-07-22 | [Blockfrost's transformation to not-for-profit](Blockfrost's transformation to not-for-profit.html) | Yes | Treasury Withdrawals |
 | 2026-07-22 | [Global Order Book connect Cardano DeFi to increase transaction](Global Order Book connect Cardano DeFi to increase transaction.html) | Abstain | Treasury Withdrawals |
 | 2026-07-22 | [Scalus 2026: Maintenance, Dijkstra Readiness, Interoperability & Application Runtime](Scalus 2026_Maintenance, Dijkstra Readiness, Interoperability & Application Runtime.html) | Yes | Treasury Withdrawals |
