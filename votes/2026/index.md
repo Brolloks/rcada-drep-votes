@@ -5,10 +5,11 @@ title: "RCADA Votes — 2026"
 
 ## RCADA Votes — 2026
 
-**61 committed votes** · Yes: 36 · No: 2 · Abstain: 23
+**62 committed votes** · Yes: 37 · No: 2 · Abstain: 23
 
 | Date | Proposal | Vote | Type |
 |---|---|---|---|
+| 2026-08-01 | [Bifrost: Unlocking Bitcoin DeFi on Cardano — Road to Mainnet (Phase 1 of 2)](Bifrost_ Unlocking Bitcoin DeFi on Cardano — Road to Mainnet (Phase 1 of 2).html) | Yes | Treasury Withdrawals |
 | 2026-08-01 | [Net Change Limit: Cardano Treasury (Epochs 613-713)](Net Change Limit_Cardano Treasury (Epochs 613-713).html) | Yes | Info Action |
 | 2026-07-22 | [Blockfrost's transformation to not-for-profit](Blockfrost's transformation to not-for-profit.html) | Yes | Treasury Withdrawals |
 | 2026-07-22 | [Global Order Book connect Cardano DeFi to increase transaction](Global Order Book connect Cardano DeFi to increase transaction.html) | Abstain | Treasury Withdrawals |
