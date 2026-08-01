@@ -1,6 +1,3 @@
-Used **2026-08-01** as today’s committed vote date and **2026-08-02** as the expiry date. CardanoCube lists this action as voting ending **Aug 02, 2026**. ([Cardano Cube][1])
-
-```md
 ---
 title: "Net Change Limit: Cardano Treasury (Epochs 613-713)"
 gov_action_id: "gov_action15atytcy8ru7mkcs8m7r8mx7k5x36t0h6grtgmak6v5wmf4nq07lsqhakceq"
