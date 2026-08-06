@@ -822,3 +822,58 @@ body::after {
   border-top: 1px solid var(--border);
   max-width: 760px;
 }
+
+/* ── Prevent date column wrapping in vote index tables ── */
+.prose table td:first-child,
+.prose table th:first-child,
+.doc-prose table td:first-child,
+.doc-prose table th:first-child {
+  white-space: nowrap;
+  min-width: 90px;
+}
+
+/* ── Table search & sort controls ── */
+.table-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.table-search {
+  flex: 1;
+  max-width: 380px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.table-search::placeholder { color: var(--text-dim); }
+.table-search:focus { border-color: var(--teal); }
+.table-result-count {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+.prose table th,
+.doc-prose table th {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.15s;
+}
+.prose table th:hover,
+.doc-prose table th:hover { color: var(--teal); }
+.prose table th.sort-asc::after,
+.doc-prose table th.sort-asc::after  { content: ' ↑'; color: var(--teal); }
+.prose table th.sort-desc::after,
+.doc-prose table th.sort-desc::after { content: ' ↓'; color: var(--teal); }
+
+/* Vote badge colours inside table cells */
+.prose table td .vote-yes    { color: var(--yes); font-weight: 600; }
+.prose table td .vote-no     { color: var(--no);  font-weight: 600; }
+.prose table td .vote-abstain { color: var(--abstain); font-weight: 600; }
