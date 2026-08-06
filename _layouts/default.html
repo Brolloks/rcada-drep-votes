@@ -198,19 +198,83 @@ document.querySelectorAll('.prose ul li').forEach(function(li) {
   var isPass = (ch === '\u2713' || ch === '\u2714');
   var isWarn = (ch === '\u26a0' || ch === '\u25b3');
   if (!isPass && !isWarn) return;
-
-  // Split the text node: [icon][rest]
   var icon = document.createElement('span');
   icon.className = 'item-icon';
   icon.textContent = ch;
-
   var rest = document.createTextNode(first.textContent.slice(first.textContent.indexOf(ch) + 1));
   li.replaceChild(rest, first);
   li.insertBefore(icon, rest);
-
   if (isPass) li.classList.add('item-pass');
   if (isWarn) li.classList.add('item-warn');
 });
+
+// ── Search + sort for year index tables ──────────────────────────────────────
+(function() {
+  var prose = document.querySelector('.doc-prose');
+  if (!prose) return;
+  var table = prose.querySelector('table');
+  if (!table) return;
+  var tbody = table.querySelector('tbody');
+  var thead = table.querySelector('thead');
+  if (!tbody || !thead) return;
+
+  var rows = Array.from(tbody.querySelectorAll('tr'));
+
+  // Inject search bar above the table
+  var wrap = document.createElement('div');
+  wrap.className = 'table-search-wrap';
+  var input = document.createElement('input');
+  input.type = 'text';
+  input.className = 'table-search';
+  input.placeholder = 'Search proposals, vote, type\u2026';
+  var count = document.createElement('span');
+  count.className = 'table-result-count';
+  wrap.appendChild(input);
+  wrap.appendChild(count);
+  table.parentNode.insertBefore(wrap, table);
+
+  var sortCol = 0;
+  var sortDir = -1;
+
+  function cellText(row, col) {
+    var cells = row.querySelectorAll('td');
+    return cells[col] ? cells[col].textContent.trim().toLowerCase() : '';
+  }
+
+  function render() {
+    var q = input.value.trim().toLowerCase();
+    var filtered = rows.filter(function(r) {
+      return !q || r.textContent.toLowerCase().indexOf(q) !== -1;
+    });
+    filtered.sort(function(a, b) {
+      var av = cellText(a, sortCol);
+      var bv = cellText(b, sortCol);
+      return av < bv ? -sortDir : av > bv ? sortDir : 0;
+    });
+    rows.forEach(function(r) { r.style.display = 'none'; });
+    filtered.forEach(function(r) {
+      tbody.appendChild(r);
+      r.style.display = '';
+    });
+    count.textContent = filtered.length + ' of ' + rows.length + ' votes';
+  }
+
+  input.addEventListener('input', render);
+
+  var ths = Array.from(thead.querySelectorAll('th'));
+  ths.forEach(function(th, i) {
+    th.addEventListener('click', function() {
+      sortCol = i;
+      sortDir = (sortCol === i) ? sortDir * -1 : (i === 0 ? -1 : 1);
+      ths.forEach(function(t) { t.classList.remove('sort-asc', 'sort-desc'); });
+      th.classList.add(sortDir === 1 ? 'sort-asc' : 'sort-desc');
+      render();
+    });
+  });
+
+  ths[0].classList.add('sort-desc');
+  render();
+})();
 </script>
 </body>
 </html>
