@@ -165,6 +165,7 @@ However, the proposal asks the Treasury to fund a new allocation institution bef
 ## RCADA Rationale
 
 RCADA votes **ABSTAIN** on **Revised Cardano dOSPO and OMF Program Proposal**.
+
 This is a constructive abstention.
 
 RCADA previously abstained on the earlier dOSPO and OMF proposal while noting that a smaller pilot would be easier to support. This revised version is meaningfully smaller and more focused, which RCADA recognises positively, but the key governance concerns around administrator concentration, advisory-only councils, and the not-yet-operational independent entity remain unresolved.
