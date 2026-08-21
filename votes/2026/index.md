@@ -5,10 +5,11 @@ title: "RCADA Votes — 2026"
 
 ## RCADA Votes — 2026
 
-**66 committed votes** · Yes: 39 · No: 2 · Abstain: 25
+**67 committed votes** · Yes: 40 · No: 2 · Abstain: 25
 
 | Date | Proposal | Vote | Type |
 |---|---|---|---|
+| 2026-08-21 | [Reimburse Ikigai Info Governance Action Deposit](2026-08-21_Reimburse Ikigai Info Governance Action Deposit.html) | Yes | Treasury Withdrawals |
 | 2026-08-21 | [Name the Protocol Version 12 hard fork “von Bergen”](Name the Protocol Version 12 hard fork von Bergen.html) | Abstain | Info Action |
 | 2026-08-21 | [Reduce minPoolCost to 75 ada and increase Plutus Memory Limits (Part 2)](Reduce minPoolCost to 75 ada and increase Plutus Memory Limits (Part 2).html) | Yes | Protocol Parameter Change |
 | 2026-08-06 | [Revised Cardano dOSPO and OMF Program Proposal](Revised Cardano dOSPO and OMF Program Proposal.html) | Abstain | Treasury Withdrawals |
