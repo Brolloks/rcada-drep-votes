@@ -5,11 +5,12 @@ title: "RCADA Votes — 2026"
 
 ## RCADA Votes — 2026
 
-**65 committed votes** · Yes: 38 · No: 2 · Abstain: 25
+**66 committed votes** · Yes: 39 · No: 2 · Abstain: 25
 
 | Date | Proposal | Vote | Type |
 |---|---|---|---|
 | 2026-08-21 | [Name the Protocol Version 12 hard fork “von Bergen”](Name the Protocol Version 12 hard fork von Bergen.html) | Abstain | Info Action |
+| 2026-08-21 | [Reduce minPoolCost to 75 ada and increase Plutus Memory Limits (Part 2)](Reduce minPoolCost to 75 ada and increase Plutus Memory Limits (Part 2).html) | Yes | Protocol Parameter Change |
 | 2026-08-06 | [Revised Cardano dOSPO and OMF Program Proposal](Revised Cardano dOSPO and OMF Program Proposal.html) | Abstain | Treasury Withdrawals |
 | 2026-08-06 | [Withdraw 120,000,000 ada for AlphaGrowth’s Cardano PRIME](Withdraw 120,000,000 ada for AlphaGrowth’s Cardano PRIME.html) | Yes | Treasury Withdrawals |
 | 2026-08-01 | [Bifrost: Unlocking Bitcoin DeFi on Cardano — Road to Mainnet (Phase 1 of 2)](Bifrost_ Unlocking Bitcoin DeFi on Cardano — Road to Mainnet (Phase 1 of 2).html) | Yes | Treasury Withdrawals |
