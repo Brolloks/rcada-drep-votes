@@ -5,10 +5,11 @@ title: "RCADA Votes — 2026"
 
 ## RCADA Votes — 2026
 
-**68 committed votes** · Yes: 41 · No: 2 · Abstain: 25
+**69 committed votes** · Yes: 42 · No: 2 · Abstain: 25
 
 | Date | Proposal | Vote | Type |
 |---|---|---|---|
+| 2026-08-31 | [Update Constitutional Committee 2026](Update Constitutional Committee 2026.html) | Yes | Update Committee |
 | 2026-08-21 | [Reimburse Ikigai Info Governance Action Deposit](2026-08-21_Reimburse Ikigai Info Governance Action Deposit.html) | Yes | Treasury Withdrawals |
 | 2026-08-21 | [Governance Incentives Framework 2026](Governance Incentives Framework 2026.html) | Yes | Treasury Withdrawals |
 | 2026-08-21 | [Name the Protocol Version 12 hard fork “von Bergen”](Name the Protocol Version 12 hard fork von Bergen.html) | Abstain | Info Action |
