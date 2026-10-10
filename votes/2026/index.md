@@ -5,11 +5,12 @@ title: "RCADA Votes — 2026"
 
 ## RCADA Votes — 2026
 
-**70 committed votes** · Yes: 43 · No: 2 · Abstain: 25
+**71 committed votes** · Yes: 43 · No: 2 · Abstain: 26
 
 | Date | Proposal | Vote | Type |
 |---|---|---|---|
 | 2026-10-10 | [Reduce minPoolCost to 75 ada](Reduce minPoolCost to 75 ada.html) | Yes | Protocol Parameter Change |
+| 2026-10-10 | [Withdraw 11,787,063 ada for the OpenZeppelin Stack administered by Intersect](Withdraw 11,787,063 ada for the OpenZeppelin Stack administered by Intersect.html) | Abstain | Treasury Withdrawals |
 | 2026-08-31 | [Update Constitutional Committee 2026](Update Constitutional Committee 2026.html) | Yes | Update Committee |
 | 2026-08-21 | [Reimburse Ikigai Info Governance Action Deposit](2026-08-21_Reimburse Ikigai Info Governance Action Deposit.html) | Yes | Treasury Withdrawals |
 | 2026-08-21 | [Governance Incentives Framework 2026](Governance Incentives Framework 2026.html) | Yes | Treasury Withdrawals |
