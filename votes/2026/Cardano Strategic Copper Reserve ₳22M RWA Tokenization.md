@@ -1,4 +1,3 @@
-
 ---
 title: "Cardano Strategic Copper Reserve | ₳22M RWA Tokenization"
 gov_action_id: "gov_action1dmwlfuwm45r0x2d2d96r2kwyjv9hk6ylzmq8xpsay2xecesn6xwqqdlv55z"
@@ -242,5 +241,3 @@ This decision is not a rejection of RWA tokenization, commodity-backed assets or
 6. [Cardano Forum — Governance Hour #12 discussion (27 October 2026)](https://forum.cardano.org/t/governance-hour-12-cardano-strategic-copper-reserve-22m-rwa-tokenization-27-october/157519)
 7. [CryptoSlate — Net Change Limit snapshot (16 October 2026)](https://cryptoslate.com/cardano-has-42-6-million-ada-left-under-its-current-treasury-spending-limit/)
 8. [CoinDesk — Copper Treasury proposal financial analysis (23 October 2026)](https://www.coindesk.com/markets/2026/10/23/cardano-holders-are-being-asked-to-bet-usd5-million-on-copper-hitting-a-new-record)
-
-**Record finalization:** After the on-chain vote is successfully submitted, update only the authoritative YAML front matter for `vote: "No"`, `status: "Committed"` and `vote_date: "YYYY-MM-DD"` (using the actual date). Verify the action ID and on-chain result before publication as a committed record.
