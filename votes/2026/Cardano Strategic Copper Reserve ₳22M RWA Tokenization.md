@@ -2,7 +2,7 @@
 title: "Cardano Strategic Copper Reserve | ₳22M RWA Tokenization"
 gov_action_id: "gov_action1dmwlfuwm45r0x2d2d96r2kwyjv9hk6ylzmq8xpsay2xecesn6xwqqdlv55z"
 type: "Treasury Withdrawals"
-vote: "Draft"
+vote: "no"
 vote_date: "2026-11-12"
 expires: "2026-11-15"
 status: "Committed"
