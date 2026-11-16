@@ -3,7 +3,7 @@ title: "AURORA: Open infrastructure for bringing real credit markets to Cardano"
 gov_action_id: "gov_action1znt2fr0chyye50nj0cdld2dvdjg3xsdfvq0fr37n43uehlvfkqdsqjnuq3n"
 type: "Treasury Withdrawals"
 vote: "Abstain"
-vote_date: null
+vote_date: "2026-11-16"
 expires: "2026-11-20"
 status: "Committed"
 constitution_version: "Cardano Blockchain Ecosystem Constitution v2.4"
@@ -13,6 +13,7 @@ adastat: "https://adastat.net/governances/14d6a48df8b9099a3e727e1bf6a9ac6c911341
 govtool: "https://gov.tools/governance_actions/14d6a48df8b9099a3e727e1bf6a9ac6c911341a9601e91c7d3ac799bfd89b01b"
 forum: ""
 ipfs: ""
+---
 Summary
 AURORA requests ₳940,000 from the Cardano Treasury for approximately five months of development of shared credit-market infrastructure. Fairway is the lead implementer, with technical contributions from Sundial and architectural advice from Fallen Icarus. The proposal aims to make individual credit opportunities across compatible Cardano lending systems easier to discover, compare, filter and verify through common standards and open software.
 The intended outputs include metadata and verification standards, a Discovery Engine for compatible Loan Request UTxOs, open APIs, filtering and query tooling, capital-provider profiles, developer tooling, a reference implementation, documentation and independent reviews. The proposed software, standards and reference implementations are to be released under Apache License 2.0.
