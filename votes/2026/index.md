@@ -5,10 +5,11 @@ title: "RCADA Votes — 2026"
 
 ## RCADA Votes — 2026
 
-**73 committed votes** · Yes: 44 · No: 3 · Abstain: 26
+**74 committed votes** · Yes: 44 · No: 3 · Abstain: 27
 
 | Date | Proposal | Vote | Type |
 |---|---|---|---|
+| 2026-11-25 | [State of the Cardano Developer Ecosystem - 2026 Survey](State of the Cardano Developer Ecosystem - 2026 Survey.html) | Abstain | Info Action |
 | 2026-11-12 | [Cardano Strategic Copper Reserve \| ₳22M RWA Tokenization](Cardano Strategic Copper Reserve ₳22M RWA Tokenization.html) | no | Treasury Withdrawals |
 | 2026-10-10 | [Reduce minPoolCost to 75 ada](Reduce minPoolCost to 75 ada.html) | Yes | Protocol Parameter Change |
 | 2026-10-10 | [Should stakePoolTargetNum (k) be raised from 500 to 1000? (SPO poll)](Should stakePoolTargetNum (k) be raised from 500 to 1000? (SPO poll).html) | Yes | Info Action |
