@@ -1,4 +1,3 @@
-
 ---
 title: "State of the Cardano Developer Ecosystem - 2026 Survey"
 gov_action_id: "gov_action1wpjynage9uu4rg7rev2g2g2u0spvj5g3fe6lqq286m3dl5tdv47sgfs5g2"
